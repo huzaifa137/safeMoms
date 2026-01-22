@@ -241,7 +241,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="footer-section">
-                    <h4 class="footer-section-title">About Ishak Community Organisation</h4><!-- /.footer-section-title -->
+                    <h4 class="footer-section-title">About SafeMoms</h4><!-- /.footer-section-title -->
                     
                     <div class="footer-section-body">
                         <p style="color: white">Bringing a smile on the face of every child and human in the world is our passion, we have done this through providing educational services to the orphans, we aim at providing healthcare services to the children, elderly and un abled people such as pregnant mothers. We also provide basic needs like clothes, books, water, food etc. to the poor, this has brought a smile to people in the community.</p>
