@@ -3,7 +3,7 @@
 @section('content')
 
     <div
-        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #E7E9ED 0%, #E7E9ED 100%); margin-top: 8em;">
+        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #E7E9ED 0%, #E7E9ED 100%);">
 
         <!-- Hero Section -->
         <section style="padding: 120px 10% 80px 10%; text-align: center; position: relative; overflow: hidden;">
@@ -18,7 +18,8 @@
             <div style="position: relative; z-index: 2;">
                 <div
                     style="display: inline-flex; align-items: center; padding: 12px 30px; background: linear-gradient(90deg, rgba(128,143,189,0.1), rgba(70,222,72,0.1)); color: #363558; border-radius: 30px; font-size: 14px; font-weight: 800; margin-bottom: 25px; letter-spacing: 1px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.8);">
-                    <span style="color: #808FBD; margin-right: 10px;">📚</span> KNOWLEDGE RESOURCES
+                    <i class="bi bi-journal" style="color: #808FBD; margin-right: 10px;"></i>
+                    KNOWLEDGE RESOURCES
                 </div>
 
                 <h1
@@ -30,46 +31,6 @@
                     Download comprehensive guides, templates, and educational materials designed for mothers, navigators,
                     and partners. All resources are freely available.
                 </p>
-            </div>
-        </section>
-
-        <!-- Filter & Search Bar -->
-        <section style="padding: 80px 10% 80px 10%; background: white;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; background: linear-gradient(135deg, #363558 0%, #434961 100%); padding: 40px; border-radius: 30px; box-shadow: 0 30px 60px rgba(54,53,88,0.15);">
-
-                    <!-- Filter Tabs -->
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <button
-                            style="padding: 14px 28px; border-radius: 25px; border: none; background: #DD3134; color: white; font-weight: 800; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(221,49,52,0.3);">
-                            <span>📚</span> All Resources
-                        </button>
-                        <button
-                            style="padding: 14px 28px; border-radius: 25px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(10px);">
-                            <span>🤰</span> For Mothers
-                        </button>
-                        <button
-                            style="padding: 14px 28px; border-radius: 25px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(10px);">
-                            <span>👥</span> For Navigators
-                        </button>
-                        <button
-                            style="padding: 14px 28px; border-radius: 25px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-weight: 700; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; backdrop-filter: blur(10px);">
-                            <span>🤝</span> For Partners
-                        </button>
-                    </div>
-
-                    <!-- Search Bar -->
-                    <div style="position: relative; width: 350px;">
-                        <div style="position: relative;">
-                            <input type="text" placeholder="Search resources, guides, templates..."
-                                style="width: 100%; padding: 16px 25px; padding-right: 60px; border-radius: 25px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); outline: none; font-size: 15px; color: white; backdrop-filter: blur(10px);">
-                            <span
-                                style="position: absolute; right: 25px; top: 50%; transform: translateY(-50%); color: white; font-size: 20px;">🔍</span>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -85,7 +46,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                📖
+                                <i class="bi bi-journal-text"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(221,49,52,0.1); color: #DD3134; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -107,17 +68,17 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📄</span>
+                                    <i class="bi bi-file-text" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">12 pages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">2.4 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #DD3134, #ff6b6b); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(221,49,52,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
@@ -129,7 +90,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #91746E, #DCCEC1); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                📝
+                                <i class="bi bi-clipboard-check"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(145,116,110,0.1); color: #91746E; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -151,17 +112,17 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📄</span>
+                                    <i class="bi bi-file-text" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">2 pages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">0.8 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #91746E, #DCCEC1); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(145,116,110,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
@@ -173,7 +134,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #46DE48, #80E681); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                ⚠️
+                                <i class="bi bi-exclamation-triangle"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(70,222,72,0.1); color: #46DE48; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -195,17 +156,17 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">🌍</span>
+                                    <i class="bi bi-globe" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">4 languages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">1.2 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #46DE48, #80E681); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(70,222,72,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
@@ -217,7 +178,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #808FBD, #A3B4E0); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                🎓
+                                <i class="bi bi-mortarboard"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(128,143,189,0.1); color: #808FBD; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -239,17 +200,17 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📚</span>
+                                    <i class="bi bi-journal-text" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">84 pages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">8.5 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #808FBD, #A3B4E0); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(128,143,189,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
@@ -261,7 +222,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                🧠
+                                <i class="bi bi-activity"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(221,49,52,0.1); color: #DD3134; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -283,17 +244,17 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📄</span>
+                                    <i class="bi bi-file-text" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">16 pages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">3.1 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #DD3134, #ff6b6b); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(221,49,52,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
@@ -305,7 +266,7 @@
                             style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
                             <div
                                 style="width: 70px; height: 70px; background: linear-gradient(135deg, #46DE48, #80E681); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px;">
-                                🏥
+                                <i class="bi bi-hospital"></i>
                             </div>
                             <div
                                 style="display: inline-flex; align-items: center; background: rgba(70,222,72,0.1); color: #46DE48; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800;">
@@ -327,28 +288,20 @@
                             style="display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid #f0f0f0;">
                             <div style="display: flex; align-items: center; gap: 15px;">
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📄</span>
+                                    <i class="bi bi-file-text" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">8 pages</span>
                                 </div>
                                 <div style="display: flex; align-items: center; gap: 8px;">
-                                    <span style="color: #808FBD; font-size: 14px;">📊</span>
+                                    <i class="bi bi-hdd" style="color: #808FBD; font-size: 14px;"></i>
                                     <span style="font-size: 13px; color: #808FBD; font-weight: 600;">1.8 MB</span>
                                 </div>
                             </div>
                             <a href="#"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #46DE48, #80E681); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(70,222,72,0.2);">
-                                Download <span style="font-size: 18px;">⬇</span>
+                                Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- View All Button -->
-                <div style="text-align: center; margin-top: 60px;">
-                    <button
-                        style="padding: 18px 40px; border-radius: 30px; border: 2px solid #f0f0f0; background: white; color: #363558; font-weight: 800; font-size: 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 15px; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
-                        <span>📚</span> View All 48 Resources <span style="color: #DD3134;">→</span>
-                    </button>
                 </div>
             </div>
         </section>
@@ -365,7 +318,9 @@
                 <div style="text-align: center; margin-bottom: 60px;">
                     <div
                         style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 30px; margin-bottom: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                        <span style="color: #46DE48; margin-right: 10px;">❓</span>
+                        <span style="color: #46DE48; margin-right: 10px;">
+                            <i class="bi bi-question-circle"></i>
+                        </span>
                         <div style="font-size: 14px; font-weight: 800;">FREQUENTLY ASKED QUESTIONS</div>
                     </div>
 
@@ -389,8 +344,7 @@
                             <div style="flex: 1;">
                                 <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px; color: white;">How do I
                                     register for SafeMoms Navigator services?</div>
-                                <div
-                                    style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-top: 15px; display: none;">
+                                <div style="font-size: 14px; opacity: 0.8; line-height: 1.6;  15px; display: none;">
                                     Registration is simple! You can register by calling our toll-free number (+256 700 123
                                     456), visiting any local health center in our coverage areas, or through community
                                     health workers. No documents are required for initial registration.
@@ -411,8 +365,7 @@
                             <div style="flex: 1;">
                                 <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px; color: white;">Is there
                                     a cost for the services?</div>
-                                <div
-                                    style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-top: 15px; display: none;">
+                                <div style="font-size: 14px; opacity: 0.8; line-height: 1.6;  15px; display: none;">
                                     All SafeMoms Navigator services are completely free of charge. This includes SMS
                                     reminders, home visits by navigators, emergency transport coordination, and all
                                     educational materials. We are funded through partnerships and grants.
@@ -433,8 +386,7 @@
                             <div style="flex: 1;">
                                 <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px; color: white;">What
                                     areas do you cover?</div>
-                                <div
-                                    style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-top: 15px; display: none;">
+                                <div style="font-size: 14px; opacity: 0.8; line-height: 1.6;  15px; display: none;">
                                     We currently operate in 24 districts across Uganda's four regions: Central (7
                                     districts), Eastern (5 districts), Northern (6 districts), and Western (6 districts).
                                     We're expanding to reach all 135 districts by 2025.
@@ -455,8 +407,7 @@
                             <div style="flex: 1;">
                                 <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px; color: white;">How do I
                                     become a youth navigator?</div>
-                                <div
-                                    style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-top: 15px; display: none;">
+                                <div style="font-size: 14px; opacity: 0.8; line-height: 1.6;  15px; display: none;">
                                     We recruit youth (18-30 years) from local communities. Requirements include completion
                                     of secondary education, passion for maternal health, and commitment to serving your
                                     community. Training is provided free of charge.
@@ -477,8 +428,7 @@
                             <div style="flex: 1;">
                                 <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px; color: white;">How can
                                     my organization partner with SafeMoms Navigator?</div>
-                                <div
-                                    style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-top: 15px; display: none;">
+                                <div style="font-size: 14px; opacity: 0.8; line-height: 1.6;  15px; display: none;">
                                     We partner with health facilities, NGOs, government agencies, and corporate
                                     organizations. Partnership opportunities include program implementation, funding,
                                     research collaboration, and advocacy. Contact our partnerships team at
@@ -495,7 +445,7 @@
 
                 <!-- FAQ Contact -->
                 <div
-                    style="background: rgba(70,222,72,0.1); padding: 40px; border-radius: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(70,222,72,0.2); margin-top: 50px; text-align: center;">
+                    style="background: rgba(70,222,72,0.1); padding: 40px; border-radius: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(70,222,72,0.2);  50px; text-align: center;">
                     <div style="font-size: 20px; font-weight: 800; margin-bottom: 15px; color: white;">Still have questions?
                     </div>
                     <p
@@ -504,7 +454,8 @@
                     </p>
                     <a href="#"
                         style="display: inline-flex; align-items: center; gap: 12px; background: #46DE48; color: white; text-decoration: none; padding: 16px 35px; border-radius: 25px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(70,222,72,0.3);">
-                        📞 Contact Support <span style="font-size: 20px;">→</span>
+                        <i class="bi bi-telephone"></i> Contact Support <i class="bi bi-arrow-right"
+                            style="font-size: 20px;"></i>
                     </a>
                 </div>
             </div>

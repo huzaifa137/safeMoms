@@ -11,286 +11,442 @@
 
     <title>{{ config('app.name', 'SafeMoms') }}</title>
 
-    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/assets/css/animate.css" rel="stylesheet">
-    <link href="/assets/css/bootsnav.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/swipebox.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        :root {
+            --primary-color: #363558;
+            --secondary-color: #2d2a4a;
+            --accent-green: #46DE48;
+            --accent-red: #DD3134;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 15px;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .icon-green {
+            background: linear-gradient(135deg, var(--accent-green), #6bff8f);
+        }
+
+        .icon-red {
+            background: linear-gradient(135deg, var(--accent-red), #ff6b6b);
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.8rem 1rem;
+            margin: 0 2px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px 0;
+            margin-top: 5px;
+        }
+
+        .dropdown-item {
+            padding: 8px 20px;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .donate-btn {
+            background: linear-gradient(135deg, var(--accent-red), #ff6b6b);
+            color: white;
+            border-radius: 5px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(221, 49, 52, 0.3);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .list-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-links li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav .nav-link {
+                padding: 0.5rem 1rem;
+            }
+
+            .contact-info {
+                justify-content: center !important;
+                margin-bottom: 10px;
+            }
+
+            .social-icons {
+                justify-content: center !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-badge {
+                margin-bottom: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .navbar-brand img {
+                height: 40px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div style="background: linear-gradient(90deg, #363558 0%, #2d2a4a 100%); padding: 12px 0; color: white;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div
-                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-
-                <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: center;">
-
-                    <div
-                        style="display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(10px); min-width: fit-content;">
-                        <div
-                            style="width: 32px; height: 32px; background: linear-gradient(135deg, #46DE48, #6bff8f); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">
-                            📞
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="d-flex flex-column flex-md-row align-items-center contact-info">
+                    <div class="contact-badge mb-2 mb-md-0">
+                        <div class="contact-icon icon-green">
+                            <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
-                            <div style="font-size: 11px; opacity: 0.8; margin-bottom: 2px;">Call Us:</div>
-                            <div style="font-size: 14px; font-weight: 800;">+91 9904518814</div>
+                            <div style="font-size: 11px; opacity: 0.8;">Call Us:</div>
+                            <div style="font-size: 14px; font-weight: 600;">+91 9904518814</div>
                         </div>
                     </div>
 
-                    <div
-                        style="display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(10px); min-width: fit-content;">
-                        <div
-                            style="width: 32px; height: 32px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">
-                            ✉️
+                    <div class="contact-badge">
+                        <div class="contact-icon icon-red">
+                            <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <div style="font-size: 11px; opacity: 0.8; margin-bottom: 2px;">Mail Us:</div>
-                            <div style="font-size: 14px; font-weight: 800;">info@SafeMoms.org</div>
+                            <div style="font-size: 11px; opacity: 0.8;">Mail Us:</div>
+                            <div style="font-size: 14px; font-weight: 600;">info@SafeMoms.org</div>
                         </div>
                     </div>
                 </div>
 
-                <div style="display: flex; gap: 12px; margin: 0 auto; margin-right: 0;">
-                    <a href="https://www.facebook.com/..."
-                        style="width: 36px; height: 36px; background: linear-gradient(135deg, #4267B2, #3b5998); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; text-decoration: none; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-3px) scale(1.1)';"
-                        onmouseout="this.style.transform='translateY(0) scale(1)';" target="_blank" rel="nofollow">
-                        <i class="fa fa-facebook"></i>
+                <div class="d-flex social-icons">
+                    <a href="https://www.facebook.com/..." class="social-icon me-2"
+                        style="background: linear-gradient(135deg, #4267B2, #3b5998);">
+                        <i class="fab fa-facebook-f"></i>
+
                     </a>
-                    <a href="https://twitter.com/..."
-                        style="width: 36px; height: 36px; background: linear-gradient(135deg, #1DA1F2, #1a91da); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; text-decoration: none; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-3px) scale(1.1)';"
-                        onmouseout="this.style.transform='translateY(0) scale(1)';" target="_blank" rel="nofollow">
-                        <i class="fa fa-twitter"></i>
+                    <a href="https://twitter.com/..." class="social-icon me-2"
+                        style="background: linear-gradient(135deg, #1DA1F2, #1a91da);">
+                        <i class="fab fa-twitter"></i>
+
                     </a>
-                    <a href="http://www.linkedin.com/..."
-                        style="width: 36px; height: 36px; background: linear-gradient(135deg, #0077B5, #006699); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; text-decoration: none; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-3px) scale(1.1)';"
-                        onmouseout="this.style.transform='translateY(0) scale(1)';" target="_blank" rel="nofollow">
-                        <i class="fa fa-linkedin"></i>
+                    <a href="http://www.linkedin.com/..." class="social-icon me-2"
+                        style="background: linear-gradient(135deg, #0077B5, #006699);">
+                        <i class="fab fa-linkedin-in"></i>
+
                     </a>
-                    <a href="#"
-                        style="width: 36px; height: 36px; background: linear-gradient(135deg, #FF0000, #cc0000); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; text-decoration: none; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-3px) scale(1.1)';"
-                        onmouseout="this.style.transform='translateY(0) scale(1)';" target="_blank" rel="nofollow">
-                        <i class="fa fa-youtube-play"></i>
+                    <a href="#" class="social-icon" style="background: linear-gradient(135deg, #FF0000, #cc0000);">
+                        <i class="fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    
-    <nav class="navbar navbar-default navbar-sticky bootsnav">
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <div class="row">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo.png" alt="SafeMoms Logo">
+            </a>
 
-                <!-- Flex Container for Logo and Navbar Links -->
-                <div class="navbar-header d-flex justify-content-between align-items-center w-100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <!-- Mobile Toggle Button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
 
-                    <!-- Logo -->
-                    <a class="navbar-brand logo" href="/">
-                        <img src="/assets/images/logo.png" class="img-responsive" style="width: 150px; height: auto;" />
-                    </a>
-
-                    <!-- Navbar Menu (Links) -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <!-- Home -->
-                            <li><a href="/">Home</a></li>
-
-                            <!-- About Dropdown -->
-                            <!-- About Dropdown -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    About
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ url('aboutus') }}">Our Story</a></li>
-                                    <li><a href="javascript:void();">Mission & Vision</a></li>
-                                    <li><a href="{{ url('our-team') }}">Our Team</a></li>
-                                    <li><a href="{{ url('location') }}">Where We Work</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Programs Dropdown -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Programs
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ url('SafePregnancy') }}">Safe Pregnancy</a></li>
-                                    <li><a href="{{ url('SafeDelivery') }}">Safe Delivery</a></li>
-                                    <li><a href="{{ url('SafePostpartum') }}">Safe Postpartum</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- Other Links -->
-                            <li><a href="{{ url('Innovation') }}">Our Projects</a></li>
-                            <li><a href="{{ url('Impact') }}">Impact</a></li>
-                            <li><a href="{{url('Resources')}}">Resources</a></li>
-                            <li><a href="{{ url('News') }}">News</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('aboutus') }}">Our Story</a></li>
+                            <li><a class="dropdown-item" href="{{ url('our-team') }}">Our Team</a></li>
+                            <li><a class="dropdown-item" href="{{ url('location') }}">Where We Work</a></li>
                         </ul>
-                    </div>
+                    </li>
 
-                </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Our Programmes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('SafeDelivery') }}">Safe Delivery</a></li>
+                            <li><a class="dropdown-item" href="{{ url('SafePregnancy') }}">Safe Pregnancy</a></li>
+                            <li><a class="dropdown-item" href="{{ url('SafePostpartum') }}">Safe Postpartum</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Get Involved
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('become-a-navigator') }}">Become a Navigator</a></li>
+                            <li><a class="dropdown-item" href="{{ url('become-a-volunteer') }}">Volunteer with us</a></li>
+                            <li><a class="dropdown-item" href="{{ url('partner-with-smn') }}">Partner with SMN</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Impact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('Impact') }}">Impact</a></li>
+                            <li><a class="dropdown-item" href="{{ url('Research-and-Publications') }}">Research & Publications</a></li>
+                            <li><a class="dropdown-item" href="{{ url('Resources') }}">Resources</a></li>
+                            <li><a class="dropdown-item" href="{{ url('News') }}">News</a></li>
+                            <li><a class="dropdown-item" href="{{ url('reports') }}">Reports</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a class="nav-link donate-btn" href="{{url('donate')}}">
+                            Donate Now
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <style>
-        .navbar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+    <!-- Main Content -->
+    <main>
+        @yield('content')
+    </main>
 
-        .navbar-brand.logo img {
-            max-height: 50px;
-        }
-
-        .navbar-nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .navbar-collapse {
-            margin-left: 15px;
-        }
-
-        .navbar-nav .dropdown-toggle::after {
-            content: '\f0d7';
-            font-family: 'FontAwesome';
-            padding-left: 10px;
-        }
-
-        .navbar-nav .dropdown {
-            position: relative;
-        }
-
-        .navbar-nav .dropdown-toggle {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .navbar-nav li a {
-            line-height: 50px;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
-        .navbar-nav li a:hover {
-            background-color: #f8f8f8;
-        }
-    </style>
-
-    @yield('content')
-
-
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">About SafeMoms</h4>
-                            <!-- /.footer-section-title -->
-
-                            <div class="footer-section-body">
-                                <p style="color: white">Bringing a smile on the face of every child and human in the
-                                    world is our passion, we have done this through providing educational services to
-                                    the orphans, we aim at providing healthcare services to the children, elderly and un
-                                    abled people such as pregnant mothers. We also provide basic needs like clothes,
-                                    books, water, food etc. to the poor, this has brought a smile to people in the
-                                    community.</p>
-                            </div><!-- /.footer-section-body -->
-                        </div><!-- /.footer-section -->
-                    </div><!-- /.columns large-3 medium-12 -->
-
-                    <div class="col-md-4">
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">Quick Links</h4><!-- /.footer-section-title -->
-
-                            <div class="footer-section-body">
-                                <ul class="list-links">
-                                    <li>
-                                        <a class="link-color" href="/">Home</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="link-color" href="aboutus">About Us</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="link-color" href="activities">Activities</a>
-                                    </li>
-                                    <li>
-                                        <a class="link-color" href="projects">Projects</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="link-color" href="gallery">Gallery</a>
-                                    </li>
-
-                                    <li>
-                                        <a class="link-color" href="contact">Contact Us</a>
-                                    </li>
-                                </ul><!-- /.list-links -->
-
-                            </div><!-- /.footer-section-body -->
-                        </div><!-- /.footer-section -->
-                    </div><!-- /.columns large-3 medium-12 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>About SafeMoms</h4>
+                    <p>SafeMoms Navigator is a youth-led maternal health initiative currently operating in
+<span><strong>Jinja District, Uganda,</strong></span> with plans to expand to additional districts.
+We support mothers, children, and vulnerable families through healthcare,
+education, and essential community services.
+</p>
+                </div>
 
 
 
-                    <div class="col-md-3">
-                        <div class="footer-section">
-                            <h4 class="footer-section-title">Contact Us</h4><!-- /.footer-section-title -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-links">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li><a href="{{url('aboutus')}}">About Us</a></li>
+                        <li><a href="{{ url('SafeDelivery') }}">Programs</a></li>
+                        <li><a href="{{url('Impact')}}">Impact</a></li>
+                        <li><a href="{{ url('contact') }}">Contact Us</a></li>
+                    </ul>
+                </div>
 
-                            <div class="footer-section-body" style="color:whitesmoke;">
-                                <p><b>Address:</b> buwenda village,Jinja city, Uganda</p>
-
-                                <div class="footer-contacts" style="color:whitesmoke;>
-								<p>
-									<b>
-										<i class=" fa fa-phone"></i> Phone:
-                                    </b>
-
-                                    +25703691417/+919904518814/+82 10-6443-8212
-                                    </p>
-
-                                    <p>
-                                        <b>
-                                            <i class="fa fa-envelope-o"></i> Email:
-                                        </b>
-
-                                        info@SafeMoms.org
-                                    </p>
-                                </div><!-- /.footer-contacts -->
-                            </div><!-- /.footer-section-body -->
-                        </div><!-- /.footer-section -->
-                    </div><!-- /.columns large-3 medium-12 -->
-                </div><!-- /.row -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contacts">
+                        <p><strong>Address:</strong> Buwenda village, Jinja city, Uganda</p>
+                        <p><strong><i class="fas fa-phone me-2"></i>Phone:</strong>
+                            +1(236)862-7683/+256 775 130396</p>
+                        <p><strong><i class="fas fa-envelope me-2"></i>Email:</strong>
+                            info@SafeMoms.org</p>
+                    </div>
+                </div>
             </div>
-        </div><!-- /.footer-body -->
-        </div>
-        </div>
+
+            <!-- Scroll to top button -->
+            <div class="scroll-to-top" onclick="scrollToTop()">
+                <i>&#8593;</i> <!-- Unicode for upward arrow -->
+            </div>
+
+            <style>
+                /* Floating Button Style */
+                .scroll-to-top {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: red;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    box-shadow: 0 4px 12px rgba(218, 24, 24, 0.1);
+                    transition: background-color 0.3s;
+                }
+
+                .scroll-to-top:hover {
+                    background-color: #46416D;
+                }
+
+                .scroll-to-top i {
+                    color:   #2F2C4D;
+                    /* Arrow color */
+                    font-size: 30px;
+                }
+
+                /* Smooth scroll behavior */
+                html {
+                    scroll-behavior: smooth;
+                }
+            </style>
+
+            <script>
+                // Function to scroll the page to the top
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'  // Smooth scrolling effect
+                    });
+                }
+
+                // Hide the button when at the top of the page, show it when scrolled down
+                window.onscroll = function () {
+                    var button = document.querySelector('.scroll-to-top');
+
+                    if (document.body.scrollTop === 0 && document.documentElement.scrollTop === 0) {
+                        button.style.opacity = '0';  // Hide the button
+                    } else {
+                        button.style.opacity = '1';  // Show the button
+                    }
+                };
+            </script>
+            <div class="text-center pt-4 mt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+                <p>&copy; <span id="year"></span> SafeMoms. All rights reserved.</p>
+
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    document.getElementById('year').textContent = currentYear;
+                </script>
+
+            </div>
         </div>
     </footer>
 
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your existing scripts -->
     <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
     <script src="/assets/js/bootsnav.js"></script>
@@ -298,27 +454,8 @@
     <script src="/assets/js/jquery.swipebox.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-            /* Basic Gallery */
             $('.swipebox').swipebox();
-
-            /* Video */
             $('.swipebox-video').swipebox();
-
-            /* Dynamic Gallery */
-            $('#gallery').click(function (e) {
-                e.preventDefault();
-                $.swipebox([{
-                    href: 'http://swipebox.csag.co/mages/image-1.jpg',
-                    title: 'My Caption'
-                },
-                {
-                    href: 'http://swipebox.csag.co/images/image-2.jpg',
-                    title: 'My Second Caption'
-                }
-                ]);
-            });
-
         });
     </script>
     <script src="/assets/js/script.js"></script>

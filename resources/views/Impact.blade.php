@@ -3,7 +3,7 @@
 @section('content')
 
     <div
-        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%); margin-top: 8em;">
+        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #f9f5f0 0%, #ffffff 100%);">
 
         <!-- Hero Section -->
         <section style="padding: 120px 10% 80px 10%; text-align: center; position: relative; overflow: hidden;">
@@ -18,7 +18,7 @@
             <div style="position: relative; z-index: 2;">
                 <div
                     style="display: inline-flex; align-items: center; padding: 12px 30px; background: linear-gradient(90deg, rgba(128,143,189,0.1), rgba(70,222,72,0.1)); color: #363558; border-radius: 30px; font-size: 14px; font-weight: 800; margin-bottom: 25px; letter-spacing: 1px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.8);">
-                    <span style="color: #808FBD; margin-right: 10px;">📊</span> MEASURING OUR IMPACT
+                    <i class="bi bi-bar-chart" style="color: #808FBD; margin-right: 10px;"></i> MEASURING OUR IMPACT
                 </div>
 
                 <h1
@@ -37,8 +37,53 @@
         <section
             style="padding: 80px 10%; background: linear-gradient(135deg, #363558 0%, #434961 100%); color: white; position: relative;">
             <!-- Grid Pattern -->
-            <div
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: radial-gradient(circle at 25% 25%, #46DE48 1px, transparent 1px); background-size: 50px 50px;">
+            <!-- Chart Area -->
+            <div style="
+        position: absolute;
+        left: 60px;
+        right: 0;
+        top: 0;
+        bottom: 40px;
+        border-bottom: 2px solid #f0f0f0;
+        border-left: 2px solid #f0f0f0;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 0 30px;
+    ">
+
+                <!-- Year Group -->
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+
+                    <div style="width: 18px; height: 4%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 3%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <div style="width: 18px; height: 20%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 18%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <div style="width: 18px; height: 35%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 32%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <div style="width: 18px; height: 55%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 50%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <div style="width: 18px; height: 75%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 70%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
+                <div style="display: flex; gap: 8px; align-items: flex-end;">
+                    <div style="width: 18px; height: 98%; background: #DD3134; border-radius: 4px 4px 0 0;"></div>
+                    <div style="width: 18px; height: 92%; background: #46DE48; border-radius: 4px 4px 0 0;"></div>
+                </div>
+
             </div>
 
             <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
@@ -49,7 +94,7 @@
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
                         <div
                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 24px; box-shadow: 0 15px 30px rgba(221,49,52,0.3);">
-                            👤
+                            <i class="bi bi-person" style="color: white;"></i>
                         </div>
                         <div style="font-size: 42px; font-weight: 800; margin-bottom: 10px; color: white;">12,847</div>
                         <div style="font-size: 14px; opacity: 0.9; font-weight: 600; margin-bottom: 8px;">Mothers Supported
@@ -62,7 +107,7 @@
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
                         <div
                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #91746E, #DCCEC1); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 24px; box-shadow: 0 15px 30px rgba(145,116,110,0.3);">
-                            👶
+                            <i class="bi bi-balloon-heart" style="color: white;"></i>
                         </div>
                         <div style="font-size: 42px; font-weight: 800; margin-bottom: 10px; color: white;">11,234</div>
                         <div style="font-size: 14px; opacity: 0.9; font-weight: 600; margin-bottom: 8px;">Safe Deliveries
@@ -75,7 +120,7 @@
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
                         <div
                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #46DE48, #80E681); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 24px; box-shadow: 0 15px 30px rgba(70,222,72,0.3);">
-                            ❤️
+                            <i class="bi bi-heart-fill" style="color: white;"></i>
                         </div>
                         <div style="font-size: 42px; font-weight: 800; margin-bottom: 10px; color: white;">98%</div>
                         <div style="font-size: 14px; opacity: 0.9; font-weight: 600; margin-bottom: 8px;">Facility Birth
@@ -88,7 +133,7 @@
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
                         <div
                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #808FBD, #A3B4E0); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 24px; box-shadow: 0 15px 30px rgba(128,143,189,0.3);">
-                            📍
+                            <i class="bi bi-geo-alt" style="color: white;"></i>
                         </div>
                         <div style="font-size: 42px; font-weight: 800; margin-bottom: 10px; color: white;">24</div>
                         <div style="font-size: 14px; opacity: 0.9; font-weight: 600; margin-bottom: 8px;">Active Districts
@@ -101,7 +146,7 @@
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;">
                         <div
                             style="width: 60px; height: 60px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 24px; box-shadow: 0 15px 30px rgba(221,49,52,0.3);">
-                            🎓
+                            <i class="bi bi-mortarboard" style="color: white;"></i>
                         </div>
                         <div style="font-size: 42px; font-weight: 800; margin-bottom: 10px; color: white;">350+</div>
                         <div style="font-size: 14px; opacity: 0.9; font-weight: 600; margin-bottom: 8px;">Youth Navigators
@@ -114,34 +159,85 @@
 
         <!-- Growth Journey -->
         <section style="padding: 100px 10%; background: white; position: relative;">
+
             <!-- Background Pattern -->
-            <div
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: repeating-linear-gradient(45deg, #46DE48 0px, #46DE48 1px, transparent 1px, transparent 30px);">
-            </div>
+            <div style="
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.03;
+            background-image: repeating-linear-gradient(
+                45deg,
+                #46DE48 0px,
+                #46DE48 1px,
+                transparent 1px,
+                transparent 30px
+            );
+        "></div>
 
             <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; text-align: center;">
-                <div
-                    style="display: inline-flex; align-items: center; background: rgba(54,53,88,0.1); padding: 15px 30px; border-radius: 30px; color: #363558; font-size: 14px; font-weight: 800; margin-bottom: 25px; gap: 10px;">
-                    <span style="color: #46DE48; font-size: 20px;">📈</span> GROWTH JOURNEY
-                </div>
 
+                <!-- Label -->
+                <div style="
+                display: inline-flex;
+                align-items: center;
+                background: rgba(54,53,88,0.1);
+                padding: 15px 30px;
+                border-radius: 30px;
+                color: #363558;
+                font-size: 14px;
+                font-weight: 800;
+                margin-bottom: 25px;
+                gap: 10px;
+            ">
+                   <span style="color: #46DE48; font-size: 20px;">
+    <i class="bi bi-graph-up"></i>
+</span>
+GROWTH JOURNEY
+</div>
+
+                <!-- Title -->
                 <h2 style="font-size: 48px; color: #363558; margin-bottom: 20px; font-weight: 800;">
-                    From <span style="color: #DD3134;">250</span> to <span style="color: #46DE48;">12,847+</span>
+                    From <span style="color: #DD3134;">250</span>
+                    to <span style="color: #46DE48;">12,847+</span>
                 </h2>
 
-                <p style="color: #5a5a5a; max-width: 700px; margin: 0 auto 60px auto; line-height: 1.7; font-size: 18px;">
+                <!-- Subtitle -->
+                <p style="
+                color: #5a5a5a;
+                max-width: 700px;
+                margin: 0 auto 60px auto;
+                line-height: 1.7;
+                font-size: 18px;
+            ">
                     Our exponential growth journey from serving 250 mothers in 2019 to over 12,000 today demonstrates the
                     scalability and impact of our model.
                 </p>
 
                 <!-- Growth Visualization -->
-                <div
-                    style="background: white; border-radius: 30px; padding: 50px; box-shadow: 0 40px 80px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
+                <div style="
+                background: white;
+                border-radius: 30px;
+                padding: 50px;
+                box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+                border: 1px solid #f0f0f0;
+            ">
+
                     <!-- Chart Container -->
                     <div style="height: 400px; position: relative; margin-bottom: 40px;">
+
                         <!-- Y-axis Labels -->
-                        <div
-                            style="position: absolute; left: 0; top: 0; bottom: 40px; width: 60px; display: flex; flex-direction: column; justify-content: space-between; padding: 20px 0;">
+                        <div style="
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 40px;
+                        width: 60px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 20px 0;
+                    ">
                             <div style="font-size: 12px; color: #808FBD; font-weight: 600; text-align: right;">12,000</div>
                             <div style="font-size: 12px; color: #808FBD; font-weight: 600; text-align: right;">9,000</div>
                             <div style="font-size: 12px; color: #808FBD; font-weight: 600; text-align: right;">6,000</div>
@@ -150,112 +246,99 @@
                         </div>
 
                         <!-- Chart Area -->
-                        <div
-                            style="position: absolute; left: 60px; right: 0; top: 0; bottom: 40px; border-bottom: 2px solid #f0f0f0; border-left: 2px solid #f0f0f0;">
+                        <div style="
+                        position: absolute;
+                        left: 60px;
+                        right: 0;
+                        top: 0;
+                        bottom: 40px;
+                        border-bottom: 2px solid #f0f0f0;
+                        border-left: 2px solid #f0f0f0;
+                    ">
+
                             <!-- Grid Lines -->
                             <div
-                                style="position: absolute; left: 0; right: 0; top: 0%; height: 1px; background: rgba(0,0,0,0.05);">
+                                style="position:absolute; left:0; right:0; top:0%; height:1px; background:rgba(0,0,0,0.05);">
                             </div>
                             <div
-                                style="position: absolute; left: 0; right: 0; top: 25%; height: 1px; background: rgba(0,0,0,0.05);">
+                                style="position:absolute; left:0; right:0; top:25%; height:1px; background:rgba(0,0,0,0.05);">
                             </div>
                             <div
-                                style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(0,0,0,0.05);">
+                                style="position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(0,0,0,0.05);">
                             </div>
                             <div
-                                style="position: absolute; left: 0; right: 0; top: 75%; height: 1px; background: rgba(0,0,0,0.05);">
+                                style="position:absolute; left:0; right:0; top:75%; height:1px; background:rgba(0,0,0,0.05);">
                             </div>
                             <div
-                                style="position: absolute; left: 0; right: 0; top: 100%; height: 1px; background: rgba(0,0,0,0.05);">
+                                style="position:absolute; left:0; right:0; top:100%; height:1px; background:rgba(0,0,0,0.05);">
                             </div>
 
-                            <!-- Data Points - Mothers Supported -->
+                            <!-- Mothers Supported (RED) -->
                             <div
-                                style="position: absolute; left: 8%; bottom: 2%; width: 40px; height: 4%; background: #DD3134; border-radius: 4px 4px 0 0;">
+                                style="position:absolute; left:8%;  bottom:0; width:18px; height:4%;  background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
                             <div
-                                style="position: absolute; left: 24%; bottom: 10%; width: 40px; height: 20%; background: #DD3134; border-radius: 4px 4px 0 0;">
+                                style="position:absolute; left:24%; bottom:0; width:18px; height:20%; background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
                             <div
-                                style="position: absolute; left: 40%; bottom: 25%; width: 40px; height: 35%; background: #DD3134; border-radius: 4px 4px 0 0;">
+                                style="position:absolute; left:40%; bottom:0; width:18px; height:35%; background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
                             <div
-                                style="position: absolute; left: 56%; bottom: 45%; width: 40px; height: 55%; background: #DD3134; border-radius: 4px 4px 0 0;">
+                                style="position:absolute; left:56%; bottom:0; width:18px; height:55%; background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
                             <div
-                                style="position: absolute; left: 72%; bottom: 65%; width: 40px; height: 75%; background: #DD3134; border-radius: 4px 4px 0 0;">
+                                style="position:absolute; left:72%; bottom:0; width:18px; height:75%; background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
                             <div
-                                style="position: absolute; left: 88%; bottom: 95%; width: 40px; height: 98%; background: #DD3134; border-radius: 4px 4px 0 0;">
-                            </div>
-
-                            <!-- Data Points - Safe Deliveries -->
-                            <div
-                                style="position: absolute; left: 8%; bottom: 1%; width: 40px; height: 3%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
-                            </div>
-                            <div
-                                style="position: absolute; left: 24%; bottom: 8%; width: 40px; height: 18%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
-                            </div>
-                            <div
-                                style="position: absolute; left: 40%; bottom: 22%; width: 40px; height: 32%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
-                            </div>
-                            <div
-                                style="position: absolute; left: 56%; bottom: 40%; width: 40px; height: 50%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
-                            </div>
-                            <div
-                                style="position: absolute; left: 72%; bottom: 60%; width: 40px; height: 70%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
-                            </div>
-                            <div
-                                style="position: absolute; left: 88%; bottom: 90%; width: 40px; height: 92%; background: #46DE48; border-radius: 4px 4px 0 0; opacity: 0.8;">
+                                style="position:absolute; left:88%; bottom:0; width:18px; height:98%; background:#DD3134; border-radius:4px 4px 0 0;">
                             </div>
 
-                            <!-- Year Lines -->
+                            <!-- Safe Deliveries (GREEN) -->
                             <div
-                                style="position: absolute; left: 8%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:8%;  bottom:0; margin-left:22px; width:18px; height:3%;  background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
                             <div
-                                style="position: absolute; left: 24%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:24%; bottom:0; margin-left:22px; width:18px; height:18%; background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
                             <div
-                                style="position: absolute; left: 40%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:40%; bottom:0; margin-left:22px; width:18px; height:32%; background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
                             <div
-                                style="position: absolute; left: 56%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:56%; bottom:0; margin-left:22px; width:18px; height:50%; background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
                             <div
-                                style="position: absolute; left: 72%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:72%; bottom:0; margin-left:22px; width:18px; height:70%; background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
                             <div
-                                style="position: absolute; left: 88%; bottom: -2px; width: 1px; height: 8px; background: #808FBD;">
+                                style="position:absolute; left:88%; bottom:0; margin-left:22px; width:18px; height:92%; background:#46DE48; border-radius:4px 4px 0 0; opacity:0.85;">
                             </div>
+
                         </div>
 
                         <!-- X-axis Labels -->
-                        <div
-                            style="position: absolute; left: 60px; right: 0; bottom: 0; height: 40px; display: flex; justify-content: space-around; align-items: flex-end;">
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 8%;">
-                                2019</div>
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 24%;">
-                                2020</div>
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 40%;">
-                                2021</div>
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 56%;">
-                                2022</div>
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 72%;">
-                                2023</div>
-                            <div
-                                style="font-size: 12px; color: #808FBD; font-weight: 600; transform: translateX(-50%); position: relative; left: 88%;">
-                                2024</div>
+                        <div style="
+                        position: absolute;
+                        left: 60px;
+                        right: 0;
+                        bottom: 0;
+                        height: 40px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: flex-end;
+                    ">
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2019</div>
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2020</div>
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2021</div>
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2022</div>
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2023</div>
+                            <div style="font-size: 12px; color: #808FBD; font-weight: 600;">2024</div>
                         </div>
+
                     </div>
 
                     <!-- Legend -->
                     <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div style="width: 24px; height: 24px; background: #DD3134; border-radius: 6px;"></div>
                             <div>
@@ -263,6 +346,7 @@
                                 <div style="font-size: 13px; color: #808FBD;">Cumulative total served</div>
                             </div>
                         </div>
+
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div style="width: 24px; height: 24px; background: #46DE48; border-radius: 6px;"></div>
                             <div>
@@ -270,45 +354,13 @@
                                 <div style="font-size: 13px; color: #808FBD;">Facility-based births</div>
                             </div>
                         </div>
+
                     </div>
 
-                    <!-- Data Points -->
-                    <div
-                        style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 40px; padding-top: 30px; border-top: 1px solid #f0f0f0;">
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2019</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">250</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">230</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2020</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">1,250</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">1,100</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2021</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">3,200</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">2,800</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2022</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">5,600</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">4,900</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2023</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">8,900</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">7,800</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="font-size: 14px; font-weight: 700; color: #363558; margin-bottom: 5px;">2024</div>
-                            <div style="font-size: 12px; color: #DD3134; font-weight: 600;">12,847</div>
-                            <div style="font-size: 11px; color: #46DE48; margin-top: 2px;">11,234</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Regional Impact -->
         <section
@@ -324,10 +376,10 @@
             <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
                 <div style="display: flex; align-items: center; gap: 80px;">
                     <div style="flex: 1;">
-                        <div
-                            style="display: inline-flex; align-items: center; background: rgba(54,53,88,0.1); padding: 15px 30px; border-radius: 30px; color: #363558; font-size: 14px; font-weight: 800; margin-bottom: 25px; gap: 10px;">
-                            <span style="color: #808FBD; font-size: 20px;">🗺️</span> REGIONAL IMPACT
-                        </div>
+                        <div style="display: inline-flex; align-items: center; background: rgba(54,53,88,0.1); padding: 15px 30px; border-radius: 30px; color: #363558; font-size: 14px; font-weight: 800; margin-bottom: 25px; gap: 10px;">
+    <i class="bi bi-map" style="color: #808FBD; font-size: 20px;"></i>
+    REGIONAL IMPACT
+</div>
 
                         <h2
                             style="font-size: 48px; color: #363558; margin-bottom: 25px; font-weight: 800; line-height: 1.2;">
@@ -483,11 +535,10 @@
             </div>
 
             <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
-                <div
-                    style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 30px; margin-bottom: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                    <span style="color: #46DE48; margin-right: 10px;">🌟</span>
-                    <div style="font-size: 14px; font-weight: 800;">SUCCESS STORIES</div>
-                </div>
+                <div style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 30px; margin-bottom: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+    <i class="bi bi-stars" style="color: #46DE48; margin-right: 10px;"></i>
+    <div style="font-size: 14px; font-weight: 800;">SUCCESS STORIES</div>
+</div>
 
                 <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 20px; color: white;">
                     Behind Every <span style="color: #46DE48;">Number</span>, a Life
@@ -572,153 +623,132 @@
             </div>
         </section>
 
-        <!-- Reports Section -->
-        <section style="padding: 100px 10%; background: white; text-align: center; position: relative;">
-            <!-- Background Elements -->
-            <div
-                style="position: absolute; top: 20%; left: 10%; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(128,143,189,0.1) 0%, rgba(128,143,189,0) 70%);">
-            </div>
-            <div
-                style="position: absolute; bottom: 30%; right: 10%; width: 100px; height: 100px; border: 2px dashed #91746E; border-radius: 30px; opacity: 0.1; transform: rotate(25deg);">
-            </div>
+<!-- Reports Section -->
+<section style="padding: 100px 10%; background: white; text-align: center; position: relative;">
+    <!-- Background Elements -->
+    <div style="position: absolute; top: 20%; left: 10%; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(128,143,189,0.1) 0%, rgba(128,143,189,0) 70%);"></div>
+    <div style="position: absolute; bottom: 30%; right: 10%; width: 100px; height: 100px; border: 2px dashed #91746E; border-radius: 30px; opacity: 0.1; transform: rotate(25deg);"></div>
 
-            <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
-                <div
-                    style="display: inline-flex; align-items: center; background: rgba(54,53,88,0.1); padding: 15px 30px; border-radius: 30px; color: #363558; font-size: 14px; font-weight: 800; margin-bottom: 25px; gap: 10px;">
-                    <span style="color: #91746E; font-size: 20px;">📋</span> DETAILED REPORTS
+    <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
+        <div style="display: inline-flex; align-items: center; background: rgba(54,53,88,0.1); padding: 15px 30px; border-radius: 30px; color: #363558; font-size: 14px; font-weight: 800; margin-bottom: 25px; gap: 10px;">
+            <i class="bi bi-file-text" style="color: #91746E; font-size: 20px;"></i>
+            DETAILED REPORTS
+        </div>
+
+        <h2 style="font-size: 48px; color: #363558; margin-bottom: 20px; font-weight: 800;">
+            Annual <span style="color: #91746E;">Impact</span> Reports
+        </h2>
+
+        <p style="color: #5a5a5a; max-width: 700px; margin: 0 auto 60px auto; line-height: 1.7; font-size: 18px;">
+            Download our detailed impact reports for comprehensive data, analysis, and stories from our work across
+            Uganda.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <!-- Report 1 -->
+            <div style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
+                    <i class="bi bi-file-earmark-text"></i>
                 </div>
-
-                <h2 style="font-size: 48px; color: #363558; margin-bottom: 20px; font-weight: 800;">
-                    Annual <span style="color: #91746E;">Impact</span> Reports
-                </h2>
-
-                <p style="color: #5a5a5a; max-width: 700px; margin: 0 auto 60px auto; line-height: 1.7; font-size: 18px;">
-                    Download our detailed impact reports for comprehensive data, analysis, and stories from our work across
-                    Uganda.
+                <div style="display: inline-flex; align-items: center; background: rgba(221,49,52,0.1); color: #DD3134; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
+                    2024 REPORT
+                </div>
+                <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
+                    Report 2024</h4>
+                <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
+                    Comprehensive analysis of our 2024 impact, including expansion to 6 new districts and detailed
+                    maternal health outcomes.
                 </p>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                    <!-- Report 1 -->
-                    <div
-                        style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
-                        <div
-                            style="width: 70px; height: 70px; background: linear-gradient(135deg, #DD3134, #ff6b6b); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
-                            📄
-                        </div>
-                        <div
-                            style="display: inline-flex; align-items: center; background: rgba(221,49,52,0.1); color: #DD3134; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
-                            2024 REPORT
-                        </div>
-                        <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
-                            Report 2024</h4>
-                        <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
-                            Comprehensive analysis of our 2024 impact, including expansion to 6 new districts and detailed
-                            maternal health outcomes.
-                        </p>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                            <div>
-                                <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
-                                <div style="font-size: 14px; font-weight: 700; color: #363558;">32 pages • 5.2MB</div>
-                            </div>
-                            <a href="#"
-                                style="color: #DD3134; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
-                                Download <span>→</span>
-                            </a>
-                        </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
+                        <div style="font-size: 14px; font-weight: 700; color: #363558;">32 pages • 5.2MB</div>
                     </div>
-
-                    <!-- Report 2 -->
-                    <div
-                        style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
-                        <div
-                            style="width: 70px; height: 70px; background: linear-gradient(135deg, #91746E, #DCCEC1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
-                            📄
-                        </div>
-                        <div
-                            style="display: inline-flex; align-items: center; background: rgba(145,116,110,0.1); color: #91746E; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
-                            2023 REPORT
-                        </div>
-                        <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
-                            Report 2023</h4>
-                        <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
-                            Detailed review of our 2023 achievements, including emergency response improvements and
-                            navigator training outcomes.
-                        </p>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                            <div>
-                                <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
-                                <div style="font-size: 14px; font-weight: 700; color: #363558;">28 pages • 4.7MB</div>
-                            </div>
-                            <a href="#"
-                                style="color: #91746E; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
-                                Download <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Report 3 -->
-                    <div
-                        style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
-                        <div
-                            style="width: 70px; height: 70px; background: linear-gradient(135deg, #808FBD, #A3B4E0); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
-                            📄
-                        </div>
-                        <div
-                            style="display: inline-flex; align-items: center; background: rgba(128,143,189,0.1); color: #808FBD; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
-                            2022 REPORT
-                        </div>
-                        <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
-                            Report 2022</h4>
-                        <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
-                            Analysis of our foundational years with focus on system development, community engagement, and
-                            initial impact metrics.
-                        </p>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
-                            <div>
-                                <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
-                                <div style="font-size: 14px; font-weight: 700; color: #363558;">24 pages • 3.8MB</div>
-                            </div>
-                            <a href="#"
-                                style="color: #808FBD; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
-                                Download <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Summary Impact -->
-                <div
-                    style="background: linear-gradient(135deg, #363558 0%, #434961 100%); color: white; padding: 50px; border-radius: 30px; margin-top: 80px;">
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
-                        <div>
-                            <div
-                                style="font-size: 56px; font-weight: 800; color: #46DE48; margin-bottom: 15px; line-height: 1;">
-                                12,847</div>
-                            <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Mothers Supported</div>
-                            <div style="font-size: 14px; opacity: 0.7;">Life-changing impact since 2019</div>
-                        </div>
-                        <div>
-                            <div
-                                style="font-size: 56px; font-weight: 800; color: #DD3134; margin-bottom: 15px; line-height: 1;">
-                                11,234</div>
-                            <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Safe Deliveries</div>
-                            <div style="font-size: 14px; opacity: 0.7;">With 98% facility birth rate</div>
-                        </div>
-                        <div>
-                            <div
-                                style="font-size: 56px; font-weight: 800; color: #91746E; margin-bottom: 15px; line-height: 1;">
-                                24</div>
-                            <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Active Districts</div>
-                            <div style="font-size: 14px; opacity: 0.7;">Across Uganda's 4 regions</div>
-                        </div>
-                    </div>
+                    <a href="#"
+                        style="color: #DD3134; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        Download <span>→</span>
+                    </a>
                 </div>
             </div>
-        </section>
 
+            <!-- Report 2 -->
+            <div style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #91746E, #DCCEC1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; background: rgba(145,116,110,0.1); color: #91746E; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
+                    2023 REPORT
+                </div>
+                <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
+                    Report 2023</h4>
+                <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
+                    Detailed review of our 2023 achievements, including emergency response improvements and
+                    navigator training outcomes.
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
+                        <div style="font-size: 14px; font-weight: 700; color: #363558;">28 pages • 4.7MB</div>
+                    </div>
+                    <a href="#"
+                        style="color: #91746E; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        Download <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Report 3 -->
+            <div style="background: linear-gradient(135deg, #ffffff, #f9f9fb); border-radius: 25px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; text-align: left;">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #808FBD, #A3B4E0); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: white; font-size: 28px;">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <div style="display: inline-flex; align-items: center; background: rgba(128,143,189,0.1); color: #808FBD; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; margin-bottom: 20px;">
+                    2022 REPORT
+                </div>
+                <h4 style="font-size: 22px; color: #363558; margin: 0 0 15px 0; font-weight: 800;">Annual Impact
+                    Report 2022</h4>
+                <p style="font-size: 15px; color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
+                    Analysis of our foundational years with focus on system development, community engagement, and
+                    initial impact metrics.
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid #f0f0f0;">
+                    <div>
+                        <div style="font-size: 12px; color: #808FBD; margin-bottom: 5px;">REPORT DETAILS</div>
+                        <div style="font-size: 14px; font-weight: 700; color: #363558;">24 pages • 3.8MB</div>
+                    </div>
+                    <a href="#"
+                        style="color: #808FBD; text-decoration: none; font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        Download <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Impact -->
+        <div style="background: linear-gradient(135deg, #363558 0%, #434961 100%); color: white; padding: 50px; border-radius: 30px; margin-top: 80px;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+                <div>
+                    <div style="font-size: 56px; font-weight: 800; color: #46DE48; margin-bottom: 15px; line-height: 1;">
+                        12,847</div>
+                    <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Mothers Supported</div>
+                    <div style="font-size: 14px; opacity: 0.7;">Life-changing impact since 2019</div>
+                </div>
+                <div>
+                    <div style="font-size: 56px; font-weight: 800; color: #DD3134; margin-bottom: 15px; line-height: 1;">
+                        11,234</div>
+                    <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Safe Deliveries</div>
+                    <div style="font-size: 14px; opacity: 0.7;">With 98% facility birth rate</div>
+                </div>
+                <div>
+                    <div style="font-size: 56px; font-weight: 800; color: #91746E; margin-bottom: 15px; line-height: 1;">
+                        24</div>
+                    <div style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Active Districts</div>
+                    <div style="font-size: 14px; opacity: 0.7;">Across Uganda's 4 regions</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </div>
 
 @endsection
