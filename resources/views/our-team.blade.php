@@ -78,89 +78,274 @@
         </div>
     </section>
 
-    <section style="padding: 60px 0; background: white; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle at 10% 20%, #363558 1px, transparent 1px); background-size: 50px 50px;"></div>
+<!-- ============================================ -->
+<!-- OUR LEADERSHIP - FROM PDF - HORIZONTAL GRID   -->
+<!-- ============================================ -->
+<section style="padding: clamp(60px, 8vw, 100px) 5%; background: white; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle at 10% 20%, #363558 1px, transparent 1px); background-size: clamp(30px, 5vw, 50px) clamp(30px, 5vw, 50px);"></div>
 
-        <div class="team-container">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <div style="display: inline-block; padding: 8px 25px; background: rgba(221,49,52,0.1); color: #363558; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; border: 1px solid rgba(221,49,52,0.2);">
-                    LEADERSHIP TEAM
+    <div style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: clamp(40px, 6vw, 80px); padding: 0 20px;">
+            <div style="display: inline-block; padding: 10px clamp(20px, 3vw, 30px); background: rgba(221,49,52,0.1); color: #363558; border-radius: 30px; font-size: clamp(12px, 1.5vw, 14px); font-weight: 700; margin-bottom: 25px; border: 1px solid rgba(221,49,52,0.2);">
+                LEADERSHIP TEAM
+            </div>
+            <h3 style="font-size: clamp(32px, 4vw, 48px); color: #363558; margin-bottom: 25px; font-weight: 800;">Our <span style="color: #DD3134;">Leadership</span></h3>
+            <p style="color: #5a5a5a; max-width: 700px; margin: 0 auto; font-size: clamp(16px, 2vw, 18px);">
+                Powered by a diverse team of leaders who bring passion, expertise, and lived experience to maternal health.
+            </p>
+        </div>
+
+        <!-- Leadership Grid - HORIZONTAL LAYOUT with responsive columns -->
+        <style>
+            .leadership-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                padding: 0 20px;
+                margin-bottom: 40px;
+            }
+            
+            @media (max-width: 1100px) {
+                .leadership-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (max-width: 640px) {
+                .leadership-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .leadership-grid-second {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                padding: 0 20px;
+            }
+            
+            @media (max-width: 900px) {
+                .leadership-grid-second {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (max-width: 640px) {
+                .leadership-grid-second {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .leader-card {
+                background: white;
+                border-radius: 25px;
+                overflow: hidden;
+                box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+                border: 1px solid #f0f0f0;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .leader-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 35px 70px rgba(0,0,0,0.15);
+            }
+            
+            .leader-image-container {
+                position: relative;
+                height: 280px;
+                overflow: hidden;
+            }
+            
+            .leader-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.7s ease;
+            }
+            
+            .leader-image:hover {
+                transform: scale(1.05);
+            }
+            
+            .leader-badge {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+            
+            .leader-tag {
+                position: absolute;
+                top: -20px;
+                left: 25px;
+                padding: 6px 20px;
+                border-radius: 15px;
+                font-size: 12px;
+                font-weight: 700;
+                color: white;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            }
+            
+            .leader-content {
+                padding: 30px 25px;
+                position: relative;
+                flex-grow: 1;
+            }
+        </style>
+
+        <!-- First Row - 4 Leaders -->
+        <div class="leadership-grid">
+            <!-- 1. Isiko Isaac - Executive Director & Co-Founder -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.1s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/president.jpg') }}" class="leader-image" alt="Isiko Isaac">
+                    <div class="leader-badge" style="background: #DD3134;">ED</div>
+                    <div class="leader-tag" style="background: #DD3134;">FOUNDER</div>
                 </div>
-                <h3 class="section-title" style="font-size: 42px; color: #363558; font-weight: 800;">Our <span style="color: #DD3134;">Leadership</span></h3>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Isiko Isaac</h4>
+                    <div style="color: #DD3134; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Executive Director & Co-Founder</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Founder of SafeMom Navigator, public health practitioner, and youth empowerment advocate. Leads strategic direction and partnerships.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #DD3134;">10+</span> Years Experience
+                    </div>
+                </div>
             </div>
 
-            <div class="leadership-grid">
-                @php
-                    $leaders = [
-                        ['name' => 'Dr. Sarah Nakato', 'role' => 'Executive Director', 'tag' => 'EXECUTIVE', 'color' => '#DD3134', 'img' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400'],
-                        ['name' => 'James Okello', 'role' => 'Program Director', 'tag' => 'PROGRAM', 'color' => '#46DE48', 'img' => 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400'],
-                        ['name' => 'Grace Mwangi', 'role' => 'Operations Director', 'tag' => 'OPERATIONS', 'color' => '#91746E', 'img' => 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400'],
-                        ['name' => 'David Omondi', 'role' => 'Partnerships Manager', 'tag' => 'PARTNERSHIPS', 'color' => '#808FBD', 'img' => 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400']
-                    ];
-                @endphp
-
-                @foreach($leaders as $index => $leader)
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
-                    <div style="height: 250px; overflow: hidden; position: relative;">
-                        <img src="{{ $leader['img'] }}" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div style="position: absolute; top: 15px; right: 15px; background: {{ $leader['color'] }}; color: white; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">0{{ $index + 1 }}</div>
-                    </div>
-                    <div style="padding: 25px; position: relative;">
-                        <div style="position: absolute; top: -15px; left: 20px; background: {{ $leader['color'] }}; color: white; padding: 5px 15px; border-radius: 10px; font-size: 11px; font-weight: 700;">{{ $leader['tag'] }}</div>
-                        <h4 style="margin: 10px 0 5px 0; color: #363558; font-size: 20px; font-weight: 800;">{{ $leader['name'] }}</h4>
-                        <p style="color: {{ $leader['color'] }}; font-size: 14px; font-weight: 700; margin-bottom: 15px;">{{ $leader['role'] }}</p>
-                        <p style="font-size: 14px; color: #666; line-height: 1.5;">Expert professional dedicated to maternal health excellence in rural Uganda.</p>
+            <!-- 2. Mr Tobiloba Oyejide Alex Omotosho - Director Research and Innovation -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.2s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/man.jpg') }}" class="leader-image" alt="Tobiloba Oyejide Alex Omotosho">
+                    <div class="leader-badge" style="background: #46DE48;">PhD</div>
+                    <div class="leader-tag" style="background: #46DE48;">RESEARCH</div>
+                </div>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Mr Tobiloba Oyejide Alex Omotosho</h4>
+                    <div style="color: #46DE48; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Director Research and Innovation</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        BSc in Nursing, MSc in Community Health Nursing. Registered nurse and lecturer, pursuing PhD in Nursing at UBC.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #46DE48;">PhD Candidate</span>
                     </div>
                 </div>
-                @endforeach
+            </div>
+
+            <!-- 3. Dr Mirembe Christine Sabano - Programs Director -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.3s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/woman.jpg') }}" class="leader-image" alt="Dr Mirembe Christine Sabano">
+                    <div class="leader-badge" style="background: #91746E;">MD</div>
+                    <div class="leader-tag" style="background: #91746E;">PROGRAMS</div>
+                </div>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Dr Mirembe Christine Sabano</h4>
+                    <div style="color: #91746E; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Programs Director</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Medical doctor from Uganda Christian University. Leads maternal and child health initiatives, navigator training, and community engagement.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #91746E;">MBChB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Mr Bukenya Huzaifah - Digital Health Lead -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.4s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/man.jpg') }}" class="leader-image" alt="Mr Bukenya Huzaifah">
+                    <div class="leader-badge" style="background: #373358;">DH</div>
+                    <div class="leader-tag" style="background: #373358;">DIGITAL</div>
+                </div>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Mr Bukenya Huzaifah</h4>
+                    <div style="color: #373358; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Digital Health Lead</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Oversees the SafeMoms Navigator digital platform, managing data systems, technology integration, and digital solutions.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #373358;">Tech Innovation</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section style="padding: 60px 0; background: linear-gradient(135deg, #E7E9ED 0%, #ffffff 100%);">
-        <div class="team-container">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <div style="display: inline-flex; align-items: center; padding: 10px 25px; background: white; border-radius: 30px; font-size: 13px; font-weight: 700; color: #363558; border: 1px solid #ddd;">
-                    <i class="bi bi-star-fill" style="color: #FFD700; margin-right: 10px;"></i> STAR NAVIGATORS
+        <!-- Second Row - 3 Leaders (Centered) -->
+        <div class="leadership-grid-second" style="justify-content: center; max-width: 1100px; margin: 0 auto;">
+            <!-- 5. Nakatabira Rebecca - Community Engagement Coordinator -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.5s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/woman.jpg') }}" class="leader-image" alt="Nakatabira Rebecca">
+                    <div class="leader-badge" style="background: #DD3134;">CE</div>
+                    <div class="leader-tag" style="background: #DD3134;">COMMUNITY</div>
                 </div>
-                <h3 class="section-title" style="font-size: 42px; margin-top: 20px; color: #363558; font-weight: 800;">Top <span style="color: #46DE48;">Impact</span></h3>
-            </div>
-
-            <div class="navigator-grid">
-                @php
-                    $navs = [
-                        ['name' => 'Faith Akello', 'dist' => 'Gulu', 'count' => '80+', 'color' => '#DD3134'],
-                        ['name' => 'Agnes Nambi', 'dist' => 'Wakiso', 'count' => '75+', 'color' => '#46DE48'],
-                        ['name' => 'Rose Atim', 'dist' => 'Lira', 'count' => '68+', 'color' => '#91746E'],
-                        ['name' => 'Diana Namatovu', 'dist' => 'Mbale', 'count' => '72+', 'color' => '#808FBD'],
-                        ['name' => 'Esther Amongin', 'dist' => 'Soroti', 'count' => '65+', 'color' => '#DD3134'],
-                        ['name' => 'Joan Nantume', 'dist' => 'Kampala', 'count' => '78+', 'color' => '#46DE48']
-                    ];
-                @endphp
-
-                @foreach($navs as $nav)
-                <div style="background: white; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
-                    <div style="width: 70px; height: 70px; margin: 0 auto 15px auto; border-radius: 50%; border: 3px solid {{ $nav['color'] }}; padding: 3px;">
-                        <img src="https://i.pravatar.cc/150?u={{ $nav['name'] }}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Nakatabira Rebecca</h4>
+                    <div style="color: #DD3134; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Community Engagement Coordinator</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Leads community outreach and health education initiatives in remote areas. Builds partnerships with local leaders and advocates for culturally sensitive interventions.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #DD3134;">Midwifery Expert</span>
                     </div>
-                    <div style="font-weight: 800; color: #363558; font-size: 15px;">{{ $nav['name'] }}</div>
-                    <div style="font-size: 12px; color: #46DE48; font-weight: 700; margin: 5px 0;"><i class="bi bi-geo-alt"></i> {{ $nav['dist'] }}</div>
-                    <div style="font-size: 20px; font-weight: 800; color: {{ $nav['color'] }};">{{ $nav['count'] }}</div>
-                    <div style="font-size: 10px; color: #808FBD; text-transform: uppercase; letter-spacing: 1px;">Mothers</div>
                 </div>
-                @endforeach
             </div>
 
-            <div style="text-align: center;">
-                <div style="display: inline-flex; align-items: center; background: #363558; color: white; padding: 15px 35px; border-radius: 50px; gap: 15px; box-shadow: 0 10px 30px rgba(54,53,88,0.3);">
-                    <i class="bi bi-people-fill" style="font-size: 24px;"></i>
-                    <div style="text-align: left;">
-                        <div style="font-weight: 800; font-size: 18px;">350+ Active Navigators</div>
-                        <div style="font-size: 12px; opacity: 0.8;">Making a difference every single day</div>
+            <!-- 6. Mr Isiko Jonathan Emmanuel - Operations Director -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.6s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/man.jpg') }}" class="leader-image" alt="Mr Isiko Jonathan Emmanuel">
+                    <div class="leader-badge" style="background: #46DE48;">OD</div>
+                    <div class="leader-tag" style="background: #46DE48;">OPERATIONS</div>
+                </div>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Mr Isiko Jonathan Emmanuel</h4>
+                    <div style="color: #46DE48; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Operations Director</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Leads community mobilisation efforts, coordinates mother support groups, and develops local partnerships to strengthen maternal health services.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #46DE48;">Community Mobilization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Ms Okoro Irene - Partnership Manager -->
+            <div class="leader-card" style="animation: fadeSlideUp 0.7s ease; animation-delay: 0.7s; animation-fill-mode: both;">
+                <div class="leader-image-container">
+                    <img src="{{ asset('assets/images/woman.jpg') }}" class="leader-image" alt="Ms Okoro Irene">
+                    <div class="leader-badge" style="background: #91746E;">PM</div>
+                    <div class="leader-tag" style="background: #91746E;">PARTNERSHIPS</div>
+                </div>
+                <div class="leader-content">
+                    <h4 style="margin: 15px 0 5px 0; color: #363558; font-size: 22px; font-weight: 800;">Ms Okoro Irene</h4>
+                    <div style="color: #91746E; font-size: 15px; font-weight: 700; margin-bottom: 15px;">Partnership Manager</div>
+                    <p style="font-size: 14px; color: #5a5a5a; line-height: 1.6; margin-bottom: 20px;">
+                        Builds and manages strategic partnerships with organisations, stakeholders, and community groups to support maternal health programs.
+                    </p>
+                    <div style="font-size: 13px; color: #373358; font-weight: 600; border-top: 1px solid #f0f0f0; padding-top: 15px;">
+                        <span style="color: #91746E;">Strategic Partnerships</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 </div>
 @endsection

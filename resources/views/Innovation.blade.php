@@ -85,14 +85,14 @@
                     <div
                         style="background: rgba(255,255,255,0.05); border-radius: 25px; padding: 40px 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); text-align: center; transition: transform 0.3s ease;">
                         <div
-                            style="width: 70px; height: 70px; background: linear-gradient(135deg, #808FBD, #A3B4E0); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; font-size: 28px; box-shadow: 0 15px 30px rgba(128,143,189,0.3);">
+                            style="width: 70px; height: 70px; background: linear-gradient(135deg, #373358, #A3B4E0); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px auto; font-size: 28px; box-shadow: 0 15px 30px rgba(128,143,189,0.3);">
                             <i class="bi bi-graph-up" style="color: white;"></i>
                         </div>
                         <h4 style="font-size: 20px; font-weight: 800; margin-bottom: 15px; color: white;">Scalable</h4>
                         <p style="font-size: 14px; opacity: 0.8; line-height: 1.6; margin-bottom: 20px;">Proven model ready
                             for rapid nationwide replication</p>
                         <div
-                            style="display: inline-flex; align-items: center; gap: 8px; background: rgba(128,143,189,0.2); color: #808FBD; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">
+                            style="display: inline-flex; align-items: center; gap: 8px; background: rgba(128,143,189,0.2); color: #373358; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">
                             EXPANDABLE
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                             </div>
                             <div>
                                 <div style="font-size: 15px; font-weight: 700; color: #363558;">Basic Phone Compatible</div>
-                                <div style="font-size: 13px; color: #808FBD;">No smartphone required</div>
+                                <div style="font-size: 13px; color: #373358;">No smartphone required</div>
                             </div>
                         </div>
 
@@ -160,7 +160,7 @@
                             </div>
                             <div>
                                 <div style="font-size: 15px; font-weight: 700; color: #363558;">4 Local Languages</div>
-                                <div style="font-size: 13px; color: #808FBD;">Luganda, Runyankole, Ateso, Luo</div>
+                                <div style="font-size: 13px; color: #373358;">Luganda, Runyankole, Ateso, Luo</div>
                             </div>
                         </div>
 
@@ -171,7 +171,7 @@
                             </div>
                             <div>
                                 <div style="font-size: 15px; font-weight: 700; color: #363558;">Two-way Communication</div>
-                                <div style="font-size: 13px; color: #808FBD;">Mothers can reply for support</div>
+                                <div style="font-size: 13px; color: #373358;">Mothers can reply for support</div>
                             </div>
                         </div>
 
@@ -182,7 +182,7 @@
                             </div>
                             <div>
                                 <div style="font-size: 15px; font-weight: 700; color: #363558;">Customizable Schedules</div>
-                                <div style="font-size: 13px; color: #808FBD;">Personalized reminder timing</div>
+                                <div style="font-size: 13px; color: #373358;">Personalized reminder timing</div>
                             </div>
                         </div>
                     </div>
@@ -193,12 +193,12 @@
                         <div style="text-align: center;">
                             <div style="font-size: 42px; font-weight: 800; color: #DD3134; line-height: 1;">250,000+</div>
                             <div style="font-size: 14px; color: #363558; font-weight: 600;">SMS Messages Sent</div>
-                            <div style="font-size: 12px; color: #808FBD; margin-top: 5px;">Since program launch</div>
+                            <div style="font-size: 12px; color: #373358; margin-top: 5px;">Since program launch</div>
                         </div>
                         <div style="text-align: center;">
                             <div style="font-size: 42px; font-weight: 800; color: #DD3134; line-height: 1;">95%</div>
                             <div style="font-size: 14px; color: #363558; font-weight: 600;">Reach Rate</div>
-                            <div style="font-size: 12px; color: #808FBD; margin-top: 5px;">Of targeted mothers</div>
+                            <div style="font-size: 12px; color: #373358; margin-top: 5px;">Of targeted mothers</div>
                         </div>
                     </div>
                 </div>
@@ -221,7 +221,7 @@
                         <div
                             style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: rgba(54,53,88,0.05); border-radius: 15px;">
                             <div>
-                                <div style="font-size: 13px; color: #808FBD; font-weight: 600; margin-bottom: 5px;">SAMPLE
+                                <div style="font-size: 13px; color: #373358; font-weight: 600; margin-bottom: 5px;">SAMPLE
                                     MESSAGE</div>
                                 <div style="font-size: 16px; font-weight: 700; color: #363558;">"Reminder: Your prenatal
                                     visit tomorrow"</div>
@@ -241,7 +241,7 @@
                 style="position: absolute; top: 20%; left: 10%; width: 100px; height: 100px; border-radius: 30px; background: linear-gradient(135deg, rgba(70,222,72,0.05), rgba(70,222,72,0)); transform: rotate(25deg);">
             </div>
             <div
-                style="position: absolute; bottom: 30%; right: 10%; width: 150px; height: 150px; border: 2px dashed #808FBD; border-radius: 50%; opacity: 0.1;">
+                style="position: absolute; bottom: 30%; right: 10%; width: 150px; height: 150px; border: 2px dashed #373358; border-radius: 50%; opacity: 0.1;">
             </div>
 
             <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
@@ -330,13 +330,13 @@
                                     < 15 min</div>
                                         <div style="font-size: 14px; color: #363558; font-weight: 600;">Average Response
                                             Time</div>
-                                        <div style="font-size: 12px; color: #808FBD;">From call to dispatch</div>
+                                        <div style="font-size: 12px; color: #373358;">From call to dispatch</div>
                                 </div>
                                 <div style="text-align: center;">
                                     <div style="font-size: 36px; font-weight: 800; color: #46DE48; margin-bottom: 10px;">98%
                                     </div>
                                     <div style="font-size: 14px; color: #363558; font-weight: 600;">Success Rate</div>
-                                    <div style="font-size: 12px; color: #808FBD;">Emergency referrals completed</div>
+                                    <div style="font-size: 12px; color: #373358;">Emergency referrals completed</div>
                                 </div>
                             </div>
                         </div>
@@ -346,14 +346,14 @@
                     <div style="display: flex; align-items: center; gap: 80px;">
                         <div style="flex: 1;">
                             <div
-                                style="display: inline-flex; align-items: center; padding: 10px 25px; background: rgba(128,143,189,0.1); color: #808FBD; border-radius: 25px; font-size: 13px; font-weight: 800; margin-bottom: 25px; letter-spacing: 1px;">
+                                style="display: inline-flex; align-items: center; padding: 10px 25px; background: rgba(128,143,189,0.1); color: #373358; border-radius: 25px; font-size: 13px; font-weight: 800; margin-bottom: 25px; letter-spacing: 1px;">
                                 <i class="bi bi-person-workspace" style="margin-right: 10px;"></i>
                                 CAPACITY BUILDING
                             </div>
 
                             <h2
                                 style="font-size: 48px; color: #363558; margin-bottom: 25px; font-weight: 800; line-height: 1.2;">
-                                Navigator <span style="color: #808FBD;">Training</span> Platform
+                                Navigator <span style="color: #373358;">Training</span> Platform
                             </h2>
 
                             <p style="font-size: 18px; color: #5a5a5a; line-height: 1.7; margin-bottom: 40px;">
@@ -365,27 +365,27 @@
                             <div
                                 style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
                                 <div
-                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #808FBD;">
+                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #373358;">
                                     <div style="font-size: 15px; font-weight: 700; color: #363558; margin-bottom: 10px;">
                                         40-Hour Core Curriculum</div>
                                     <div style="font-size: 13px; color: #5a5a5a;">Comprehensive maternal health training
                                     </div>
                                 </div>
                                 <div
-                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #808FBD;">
+                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #373358;">
                                     <div style="font-size: 15px; font-weight: 700; color: #363558; margin-bottom: 10px;">
                                         Practical Field Training</div>
                                     <div style="font-size: 13px; color: #5a5a5a;">Hands-on experience with supervision</div>
                                 </div>
                                 <div
-                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #808FBD;">
+                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #373358;">
                                     <div style="font-size: 15px; font-weight: 700; color: #363558; margin-bottom: 10px;">
                                         Monthly Refreshers</div>
                                     <div style="font-size: 13px; color: #5a5a5a;">Continuous learning and skill updates
                                     </div>
                                 </div>
                                 <div
-                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #808FBD;">
+                                    style="background: rgba(128,143,189,0.05); padding: 20px; border-radius: 20px; border-left: 4px solid #373358;">
                                     <div style="font-size: 15px; font-weight: 700; color: #363558; margin-bottom: 10px;">
                                         Certification Pathway</div>
                                     <div style="font-size: 13px; color: #5a5a5a;">Official recognition of skills and
@@ -396,16 +396,16 @@
                             <!-- Impact Stats -->
                             <div style="display: flex; gap: 40px;">
                                 <div style="text-align: center;">
-                                    <div style="font-size: 42px; font-weight: 800; color: #808FBD; line-height: 1;">500+
+                                    <div style="font-size: 42px; font-weight: 800; color: #373358; line-height: 1;">500+
                                     </div>
                                     <div style="font-size: 14px; color: #363558; font-weight: 600;">Navigators Trained</div>
-                                    <div style="font-size: 12px; color: #808FBD;">Youth equipped for service</div>
+                                    <div style="font-size: 12px; color: #373358;">Youth equipped for service</div>
                                 </div>
                                 <div style="text-align: center;">
-                                    <div style="font-size: 42px; font-weight: 800; color: #808FBD; line-height: 1;">92%
+                                    <div style="font-size: 42px; font-weight: 800; color: #373358; line-height: 1;">92%
                                     </div>
                                     <div style="font-size: 14px; color: #363558; font-weight: 600;">Retention Rate</div>
-                                    <div style="font-size: 12px; color: #808FBD;">Continue serving after 1 year</div>
+                                    <div style="font-size: 12px; color: #373358;">Continue serving after 1 year</div>
                                 </div>
                             </div>
                         </div>
@@ -518,7 +518,7 @@
                             <div style="font-size: 14px; opacity: 0.8; font-weight: 600;">Emergency Success</div>
                         </div>
                         <div>
-                            <div style="font-size: 42px; font-weight: 800; color: #808FBD; margin-bottom: 10px;">500+</div>
+                            <div style="font-size: 42px; font-weight: 800; color: #373358; margin-bottom: 10px;">500+</div>
                             <div style="font-size: 14px; opacity: 0.8; font-weight: 600;">Navigators Trained</div>
                         </div>
                         <div>

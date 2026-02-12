@@ -9,7 +9,7 @@
     <meta name="keywords" content="">
     <meta name="robots" content="index,follow">
 
-    <title>{{ config('app.name', 'SafeMoms') }}</title>
+    <title>{{ config('app.name', 'safeMom') }}</title>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -125,8 +125,8 @@
         }
 
         .donate-btn {
-            background: linear-gradient(135deg, var(--accent-red), #ff6b6b);
-            color: white;
+            background: #D83137 ;
+            color: white !important;
             border-radius: 5px;
             padding: 0.5rem 1.5rem;
             font-weight: 600;
@@ -223,7 +223,7 @@
                         </div>
                         <div>
                             <div style="font-size: 11px; opacity: 0.8;">Mail Us:</div>
-                            <div style="font-size: 14px; font-weight: 600;">info@SafeMoms.org</div>
+                            <div style="font-size: 14px; font-weight: 600;">info@safeMom.org</div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="/assets/images/logo.png" alt="SafeMoms Logo">
+                <img src="/assets/images/logo.png" alt="safeMom Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -296,8 +296,10 @@
                             Get Involved
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url('become-a-navigator') }}">Become a Navigator</a></li>
-                            <li><a class="dropdown-item" href="{{ url('become-a-volunteer') }}">Volunteer with us</a></li>
+                            <li><a class="dropdown-item" href="{{ url('become-a-navigator') }}">Become a Navigator</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ url('become-a-volunteer') }}">Volunteer with us</a>
+                            </li>
                             <li><a class="dropdown-item" href="{{ url('partner-with-smn') }}">Partner with SMN</a></li>
                         </ul>
                     </li>
@@ -308,7 +310,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ url('Impact') }}">Impact</a></li>
-                            <li><a class="dropdown-item" href="{{ url('Research-and-Publications') }}">Research & Publications</a></li>
+                            <li><a class="dropdown-item" href="{{ url('Research-and-Publications') }}">Research &
+                                    Publications</a></li>
                             <li><a class="dropdown-item" href="{{ url('Resources') }}">Resources</a></li>
                             <li><a class="dropdown-item" href="{{ url('News') }}">News</a></li>
                             <li><a class="dropdown-item" href="{{ url('reports') }}">Reports</a></li>
@@ -339,15 +342,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <h4>About SafeMoms</h4>
-                    <p>SafeMoms Navigator is a youth-led maternal health initiative currently operating in
-<span><strong>Jinja District, Uganda,</strong></span> with plans to expand to additional districts.
-We support mothers, children, and vulnerable families through healthcare,
-education, and essential community services.
-</p>
+                    <h4>About safeMom</h4>
+                    <p>safeMom Navigator is a youth-led maternal health initiative currently operating in
+                        <span><strong>Jinja District, Uganda,</strong></span> with plans to expand to additional
+                        districts.
+                        We support mothers, children, and vulnerable families through healthcare,
+                        education, and essential community services.
+                    </p>
                 </div>
-
-
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h4>Quick Links</h4>
@@ -367,7 +369,7 @@ education, and essential community services.
                         <p><strong><i class="fas fa-phone me-2"></i>Phone:</strong>
                             +1(236)862-7683/+256 775 130396</p>
                         <p><strong><i class="fas fa-envelope me-2"></i>Email:</strong>
-                            info@SafeMoms.org</p>
+                            info@safeMom.org</p>
                     </div>
                 </div>
             </div>
@@ -400,7 +402,7 @@ education, and essential community services.
                 }
 
                 .scroll-to-top i {
-                    color:   #2F2C4D;
+                    color: #2F2C4D;
                     /* Arrow color */
                     font-size: 30px;
                 }
@@ -432,7 +434,7 @@ education, and essential community services.
                 };
             </script>
             <div class="text-center pt-4 mt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-                <p>&copy; <span id="year"></span> SafeMoms. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> safeMom. All rights reserved.</p>
 
                 <script>
                     const currentYear = new Date().getFullYear();

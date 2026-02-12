@@ -5,46 +5,187 @@
 
     <!-- Geometric background elements -->
     <div style="position: absolute; top: 0; left: 0; width: 40%; height: 100%; background-color: #363558; clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); opacity: 0.05;"></div>
-    <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; background-color: #808FBD; opacity: 0.05;"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; background-color: #373358; opacity: 0.05;"></div>
 
     <div style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
 
-        <!-- Hero Section -->
-        <div style="text-align: center; margin-bottom: 80px;">
-            <div style="display: inline-block; padding: 10px 30px; background: linear-gradient(90deg, #808FBD, #A3B4E0); color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(128,143,189,0.3);">
-                <svg style="width: 16px; height: 16px; fill: white; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
+<!-- Hero Section -->
+<style>
+/* ===== HERO SECTION RESPONSIVE STYLES ===== */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 60px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 52px !important;
+    }
+    .hero-description {
+        font-size: 18px !important;
+        max-width: 700px !important;
+    }
+    .hero-badge {
+        padding: 8px 25px !important;
+        font-size: 13px !important;
+    }
+    .hero-button {
+        padding: 16px 35px !important;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin-bottom: 60px !important;
+    }
+    .hero-title {
+        font-size: 42px !important;
+        letter-spacing: -1px !important;
+    }
+    .hero-description {
+        font-size: 17px !important;
+        max-width: 600px !important;
+        margin-bottom: 40px !important;
+    }
+    .hero-badge {
+        padding: 8px 20px !important;
+        font-size: 12px !important;
+        margin-bottom: 20px !important;
+    }
+    .hero-badge svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    .hero-button {
+        padding: 14px 30px !important;
+        font-size: 15px !important;
+        gap: 10px !important;
+    }
+    .hero-button svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        margin-bottom: 50px !important;
+        padding: 0 15px !important;
+    }
+    .hero-title {
+        font-size: 32px !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 15px !important;
+    }
+    .hero-description {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 35px !important;
+        padding: 0 10px !important;
+    }
+    .hero-badge {
+        padding: 8px 18px !important;
+        font-size: 11px !important;
+        margin-bottom: 18px !important;
+    }
+    .hero-button-container {
+        gap: 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .hero-button {
+        padding: 14px 35px !important;
+        font-size: 15px !important;
+        width: 100% !important;
+        max-width: 280px !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 28px !important;
+    }
+    .hero-description {
+        font-size: 15px !important;
+    }
+    .hero-badge {
+        padding: 6px 16px !important;
+        font-size: 10px !important;
+    }
+    .hero-button {
+        padding: 12px 30px !important;
+        font-size: 14px !important;
+        max-width: 250px !important;
+    }
+}
+
+/* Landscape Mode */
+@media (max-width: 992px) and (orientation: landscape) {
+    .hero-title {
+        font-size: 48px !important;
+    }
+    .hero-button-container {
+        flex-direction: row !important;
+    }
+    .hero-button {
+        width: auto !important;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+    .hero-section {
+        margin-bottom: 70px !important;
+    }
+}
+
+/* Fix for iOS devices */
+@supports (-webkit-touch-callout: none) {
+    .hero-button {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
+}
+</style>
+
+<div class="hero-section" style="text-align: center; margin-bottom: 80px;">
+    <div class="hero-badge" style="display: inline-block; padding: 10px 30px; background: #373358; color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(128,143,189,0.3);">
+        <svg style="width: 16px; height: 16px; fill: white; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
+            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+        </svg>
+        KNOWLEDGE CENTER
+    </div>
+    
+    <h1 class="hero-title" style="font-size: 70px; line-height: 1.05; margin: 0 0 25px 0; color: #363558; font-weight: 800; letter-spacing: -1.5px;">
+        Resources & <span style="color: #DD3134;">Publications</span>
+    </h1>
+    
+    <p class="hero-description" style="font-size: 20px; line-height: 1.6; color: #5a5a5a; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Access evidence-based maternal health resources, research publications, training materials, and educational content developed by safeMom Navigator and our partners.
+    </p>
+    
+    <div class="hero-button-container" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="#publications" style="text-decoration: none;">
+            <button class="hero-button" style="background: #373358; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
+                <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                     <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                 </svg>
-                KNOWLEDGE CENTER
-            </div>
-            
-            <h1 style="font-size: 70px; line-height: 1.05; margin: 0 0 25px 0; color: #363558; font-weight: 800; letter-spacing: -1.5px;">
-                Resources & <span style="color: #DD3134;">Publications</span>
-            </h1>
-            
-            <p style="font-size: 20px; line-height: 1.6; color: #5a5a5a; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Access evidence-based maternal health resources, research publications, training materials, and educational content developed by SafeMoms Navigator and our partners.
-            </p>
-            
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="#publications" style="text-decoration: none;">
-                    <button style="background: linear-gradient(90deg, #363558, #434961); color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
-                        <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
-                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-                        </svg>
-                        Browse Publications
-                    </button>
-                </a>
-                <a href="#resources" style="text-decoration: none;">
-                    <button style="background: white; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <svg style="width: 20px; height: 20px; fill: #363558;" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                        View Resources
-                    </button>
-                </a>
-            </div>
-        </div>
+                Browse Publications
+            </button>
+        </a>
+        <a href="#resources" style="text-decoration: none;">
+            <button class="hero-button" style="background: white; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                <svg style="width: 20px; height: 20px; fill: #363558;" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                View Resources
+            </button>
+        </a>
+    </div>
+</div>
 
         <!-- Quick Access -->
         <div style="background: white; border-radius: 25px; padding: 50px; margin-bottom: 80px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
@@ -102,8 +243,8 @@
 
                 <a href="#toolkits-guides" style="text-decoration: none;">
                     <div style="background: #f8f9fa; border-radius: 20px; padding: 35px 25px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;">
-                        <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                            <svg style="width: 32px; height: 32px; fill: #808FBD;" viewBox="0 0 24 24">
+                        <div style="background: rgba(128,143,189,0.1); color: #373358; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <svg style="width: 32px; height: 32px; fill: #373358;" viewBox="0 0 24 24">
                                 <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                             </svg>
                         </div>
@@ -123,7 +264,7 @@
                     Featured <span style="color: #DD3134;">Publications</span>
                 </h2>
                 <p style="font-size: 19px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-                    Latest research and evidence-based publications from SafeMoms Navigator
+                    Latest research and evidence-based publications from safeMom Navigator
                 </p>
             </div>
 
@@ -244,7 +385,7 @@
                         </div>
                         
                         <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
-                            Comprehensive overview of SafeMoms Navigator's achievements, impact metrics, financials, and strategic direction for 2023.
+                            Comprehensive overview of safeMom Navigator's achievements, impact metrics, financials, and strategic direction for 2023.
                         </p>
                         
                         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -454,8 +595,8 @@
             <!-- Category 3: Toolkits & Guides -->
             <div id="toolkits-guides">
                 <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
-                        <svg style="width: 32px; height: 32px; fill: #808FBD;" viewBox="0 0 24 24">
+                    <div style="background: rgba(128,143,189,0.1); color: #373358; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                        <svg style="width: 32px; height: 32px; fill: #373358;" viewBox="0 0 24 24">
                             <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                         </svg>
                     </div>
@@ -466,14 +607,14 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #808FBD;" viewBox="0 0 24 24">
+                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Youth Navigator Toolkit</h4>
-                                    <div style="color: #808FBD; font-size: 13px; font-weight: 600;">Complete Implementation Guide</div>
+                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">Complete Implementation Guide</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -483,14 +624,14 @@
 
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #808FBD;" viewBox="0 0 24 24">
+                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Monitoring & Evaluation Guide</h4>
-                                    <div style="color: #808FBD; font-size: 13px; font-weight: 600;">For Program Managers</div>
+                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">For Program Managers</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -500,14 +641,14 @@
 
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #808FBD;" viewBox="0 0 24 24">
+                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Community Engagement Toolkit</h4>
-                                    <div style="color: #808FBD; font-size: 13px; font-weight: 600;">For Outreach Teams</div>
+                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">For Outreach Teams</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -517,7 +658,7 @@
                     </div>
 
                     <div style="text-align: center; margin-top: 40px;">
-                        <button style="background: linear-gradient(90deg, #808FBD, #A3B4E0); color: white; border: none; padding: 14px 35px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                        <button style="background: #373358; color: white; border: none; padding: 14px 35px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
                             <svg style="width: 18px; height: 18px; fill: white;" viewBox="0 0 24 24">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                             </svg>

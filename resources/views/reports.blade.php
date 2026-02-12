@@ -1,5 +1,573 @@
 @extends('layouts.apps')
+
 @section('content')
+
+<style>
+/* ===== PROGRAM REPORTS PAGE - FULLY RESPONSIVE ===== */
+/* No layout changes - only responsive overrides */
+
+/* Base Responsive Container */
+@media (max-width: 1400px) {
+    .reports-container {
+        max-width: 1200px !important;
+        padding: 0 3% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    section[style*="padding: 100px 5%"] {
+        padding: 80px 4% 100px 4% !important;
+    }
+    .reports-hero-title {
+        font-size: 60px !important;
+    }
+    .reports-hero-text {
+        font-size: 19px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    section[style*="padding: 100px 5%"] {
+        padding: 70px 4% 80px 4% !important;
+    }
+    
+    /* Hero Section */
+    .reports-hero-title {
+        font-size: 52px !important;
+        letter-spacing: -1px !important;
+    }
+    .reports-hero-badge {
+        padding: 8px 25px !important;
+        font-size: 13px !important;
+    }
+    .reports-hero-badge svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    .reports-hero-text {
+        font-size: 18px !important;
+        max-width: 700px !important;
+        margin-bottom: 40px !important;
+    }
+    .reports-hero-btn {
+        padding: 16px 35px !important;
+        font-size: 16px !important;
+        gap: 10px !important;
+    }
+    .reports-hero-btn svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* Statistics Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] {
+        padding: 50px 40px !important;
+        margin-bottom: 60px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h2 {
+        font-size: 42px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 17px !important;
+    }
+    
+    /* Report Cards - 2 columns on tablet */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+    }
+    
+    /* Annual Reports */
+    #annual-reports h2,
+    #financial-reports h2,
+    div[style*="margin-bottom: 100px"] h2[style*="font-size: 52px"] {
+        font-size: 42px !important;
+    }
+    #annual-reports p,
+    #financial-reports p,
+    div[style*="margin-bottom: 100px"] p[style*="font-size: 19px"] {
+        font-size: 17px !important;
+    }
+    
+    /* Financial Reports Container */
+    div[style*="background: white; border-radius: 30px; padding: 60px"] {
+        padding: 40px !important;
+    }
+    
+    /* Financial Stats Grid */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    /* Financial Report Cards */
+    div[style*="border: 2px solid #46DE48"],
+    div[style*="border: 2px solid #DD3134"],
+    div[style*="border: 2px solid #373358"] {
+        padding: 25px !important;
+    }
+    
+    /* Financial Overview Title */
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] h3 {
+        font-size: 28px !important;
+    }
+    
+    /* Program Reports Cards */
+    div[style*="border-left: 5px solid #DD3134"],
+    div[style*="border-left: 5px solid #46DE48"],
+    div[style*="border-left: 5px solid #373358"] {
+        padding: 30px !important;
+    }
+    
+    /* Report Request Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961); border-radius: 30px; padding: 70px 60px"] {
+        padding: 50px 40px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h3 {
+        font-size: 36px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 17px !important;
+    }
+    div[style*="display: flex; gap: 20px; justify-content: center; margin-top: 40px"] {
+        gap: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    section[style*="padding: 100px 5%"] {
+        padding: 50px 4% 60px 4% !important;
+    }
+    
+    /* Hero Section */
+    .reports-hero-title {
+        font-size: 42px !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 20px !important;
+    }
+    .reports-hero-badge {
+        padding: 8px 20px !important;
+        font-size: 12px !important;
+        margin-bottom: 20px !important;
+    }
+    .reports-hero-text {
+        font-size: 16px !important;
+        margin-bottom: 35px !important;
+        line-height: 1.5 !important;
+    }
+    .reports-hero-btn-container {
+        gap: 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .reports-hero-btn {
+        padding: 14px 30px !important;
+        font-size: 15px !important;
+        width: 100% !important;
+        max-width: 300px !important;
+        justify-content: center !important;
+    }
+    
+    /* Statistics Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] {
+        padding: 40px 25px !important;
+        margin-bottom: 50px !important;
+        border-radius: 20px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h2 {
+        font-size: 36px !important;
+        margin-bottom: 15px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 16px !important;
+    }
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    div[style*="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 35px 30px"] {
+        padding: 25px 20px !important;
+    }
+    div[style*="background: rgba(255,255,255,0.1)"] div[style*="font-size: 42px"] {
+        font-size: 36px !important;
+        margin-bottom: 10px !important;
+    }
+    div[style*="background: rgba(255,255,255,0.1)"] h3 {
+        font-size: 18px !important;
+    }
+    div[style*="background: rgba(255,255,255,0.1)"] p {
+        font-size: 14px !important;
+    }
+    
+    /* Report Cards - 1 column on mobile */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+    
+    /* Annual Reports Cards */
+    #annual-reports,
+    #financial-reports,
+    div[style*="margin-bottom: 100px"] {
+        margin-bottom: 60px !important;
+    }
+    #annual-reports h2,
+    #financial-reports h2,
+    div[style*="margin-bottom: 100px"] h2[style*="font-size: 52px"] {
+        font-size: 36px !important;
+        margin-bottom: 15px !important;
+    }
+    #annual-reports p,
+    #financial-reports p,
+    div[style*="margin-bottom: 100px"] p[style*="font-size: 19px"] {
+        font-size: 16px !important;
+        padding: 0 15px !important;
+    }
+    
+    /* Annual Report Card */
+    div[style*="height: 250px; background: linear-gradient"] {
+        height: 200px !important;
+    }
+    div[style*="height: 250px; background: linear-gradient"] div[style*="font-size: 48px"] {
+        font-size: 40px !important;
+    }
+    div[style*="height: 250px; background: linear-gradient"] div[style*="font-size: 24px"] {
+        font-size: 20px !important;
+    }
+    div[style*="height: 250px; background: linear-gradient"] div[style*="font-size: 18px"] {
+        font-size: 16px !important;
+    }
+    div[style*="padding: 35px 30px"] {
+        padding: 25px 20px !important;
+    }
+    div[style*="display: flex; gap: 15px"] button {
+        padding: 12px 15px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Financial Reports Container */
+    div[style*="background: white; border-radius: 30px; padding: 60px"] {
+        padding: 30px 20px !important;
+        border-radius: 20px !important;
+    }
+    
+    /* Financial Stats Grid */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    div[style*="text-align: center; padding: 30px 20px"] {
+        padding: 20px 15px !important;
+    }
+    div[style*="text-align: center; padding: 30px 20px"] div[style*="font-size: 36px"] {
+        font-size: 32px !important;
+    }
+    
+    /* Financial Overview Title */
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+        margin-bottom: 30px !important;
+    }
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] h3 {
+        font-size: 24px !important;
+    }
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] div {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    /* Financial Transparency Badges */
+    div[style*="padding: 40px; background: #f8f9fa"] {
+        padding: 30px 20px !important;
+    }
+    div[style*="padding: 40px; background: #f8f9fa"] h4 {
+        font-size: 20px !important;
+        margin-bottom: 25px !important;
+    }
+    div[style*="justify-content: center; gap: 40px"] {
+        gap: 25px !important;
+    }
+    div[style*="width: 80px; height: 80px"] {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    div[style*="width: 80px; height: 80px"] svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    /* Program Reports Cards */
+    div[style*="border-left: 5px solid #DD3134"],
+    div[style*="border-left: 5px solid #46DE48"],
+    div[style*="border-left: 5px solid #373358"] {
+        padding: 25px !important;
+    }
+    div[style*="border-left: 5px solid #DD3134"] h3,
+    div[style*="border-left: 5px solid #46DE48"] h3,
+    div[style*="border-left: 5px solid #373358"] h3 {
+        font-size: 20px !important;
+    }
+    div[style*="border-left: 5px solid #DD3134"] p,
+    div[style*="border-left: 5px solid #46DE48"] p,
+    div[style*="border-left: 5px solid #373358"] p {
+        font-size: 14px !important;
+        margin-bottom: 25px !important;
+    }
+    
+    /* Report Request Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961); border-radius: 30px; padding: 70px 60px"] {
+        padding: 40px 25px !important;
+        border-radius: 20px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h3 {
+        font-size: 30px !important;
+        margin-bottom: 15px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 16px !important;
+        margin-bottom: 25px !important;
+    }
+    div[style*="display: flex; gap: 20px; justify-content: center"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+    div[style*="display: flex; gap: 20px; justify-content: center"] button {
+        width: 100% !important;
+        max-width: 350px !important;
+        padding: 16px 30px !important;
+        font-size: 16px !important;
+        justify-content: center !important;
+    }
+    div[style*="display: flex; justify-content: center; gap: 30px; margin-top: 40px"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-top: 30px !important;
+    }
+    div[style*="display: flex; justify-content: center; gap: 30px; margin-top: 40px"] div {
+        text-align: center !important;
+    }
+    div[style*="display: flex; justify-content: center; gap: 30px; margin-top: 40px"] div[style*="width: 1px"] {
+        display: none !important;
+    }
+    div[style*="display: flex; justify-content: center; gap: 30px; margin-top: 40px"] div div[style*="font-size: 24px"] {
+        font-size: 20px !important;
+    }
+    
+    /* View All Button */
+    div[style*="text-align: center"] button[style*="padding: 16px 40px"] {
+        padding: 14px 30px !important;
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    section[style*="padding: 100px 5%"] {
+        padding: 40px 4% 50px 4% !important;
+    }
+    
+    /* Hero Section */
+    .reports-hero-title {
+        font-size: 32px !important;
+    }
+    .reports-hero-badge {
+        padding: 6px 18px !important;
+        font-size: 11px !important;
+        letter-spacing: 0.5px !important;
+    }
+    .reports-hero-text {
+        font-size: 15px !important;
+        margin-bottom: 30px !important;
+    }
+    .reports-hero-btn {
+        padding: 12px 25px !important;
+        font-size: 14px !important;
+        max-width: 280px !important;
+    }
+    
+    /* Statistics Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] {
+        padding: 30px 20px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h2 {
+        font-size: 28px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 15px !important;
+    }
+    
+    /* Annual Reports */
+    #annual-reports h2,
+    #financial-reports h2,
+    div[style*="margin-bottom: 100px"] h2[style*="font-size: 52px"] {
+        font-size: 28px !important;
+    }
+    #annual-reports p,
+    #financial-reports p,
+    div[style*="margin-bottom: 100px"] p[style*="font-size: 19px"] {
+        font-size: 15px !important;
+    }
+    
+    /* Annual Report Card */
+    div[style*="height: 250px; background: linear-gradient"] {
+        height: 180px !important;
+    }
+    div[style*="height: 250px; background: linear-gradient"] div[style*="font-size: 48px"] {
+        font-size: 36px !important;
+    }
+    div[style*="height: 250px; background: linear-gradient"] div[style*="font-size: 24px"] {
+        font-size: 18px !important;
+    }
+    
+    /* Report Card Meta */
+    div[style*="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    div[style*="background: rgba(221,49,52,0.1); color: #DD3134; padding: 8px 20px"] {
+        align-self: flex-start !important;
+    }
+    
+    /* Financial Stats */
+    div[style*="text-align: center; padding: 30px 20px"] div[style*="font-size: 36px"] {
+        font-size: 28px !important;
+    }
+    
+    /* Financial Report Cards */
+    div[style*="border: 2px solid #46DE48"],
+    div[style*="border: 2px solid #DD3134"],
+    div[style*="border: 2px solid #373358"] {
+        padding: 20px !important;
+    }
+    div[style*="border: 2px solid #46DE48"] h4,
+    div[style*="border: 2px solid #DD3134"] h4,
+    div[style*="border: 2px solid #373358"] h4 {
+        font-size: 18px !important;
+    }
+    
+    /* Program Reports */
+    div[style*="border-left: 5px solid #DD3134"] div[style*="width: 60px; height: 60px"] {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    div[style*="border-left: 5px solid #DD3134"] svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    /* Report Request */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h3 {
+        font-size: 26px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] p {
+        font-size: 15px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] button {
+        padding: 14px 25px !important;
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    /* Hero Section */
+    .reports-hero-title {
+        font-size: 28px !important;
+    }
+    .reports-hero-badge {
+        padding: 5px 15px !important;
+        font-size: 10px !important;
+    }
+    
+    /* Statistics Section */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h2 {
+        font-size: 24px !important;
+    }
+    
+    /* Annual Reports */
+    #annual-reports h2,
+    #financial-reports h2 {
+        font-size: 24px !important;
+    }
+    
+    /* Financial Overview */
+    div[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 40px"] h3 {
+        font-size: 20px !important;
+    }
+    
+    /* Report Request */
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] h3 {
+        font-size: 22px !important;
+    }
+    div[style*="background: linear-gradient(135deg, #363558, #434961)"] div[style*="font-size: 24px"] {
+        font-size: 20px !important;
+    }
+}
+
+/* Landscape Mode */
+@media (max-width: 992px) and (orientation: landscape) {
+    section[style*="padding: 100px 5%"] {
+        padding: 60px 4% 70px 4% !important;
+    }
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .reports-hero-btn-container {
+        flex-direction: row !important;
+    }
+    .reports-hero-btn {
+        width: auto !important;
+    }
+}
+
+/* Tablet Portrait Specific */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Fix hover effects for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    button:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    div[style*="transition: transform 0.3s ease"]:hover {
+        transform: none !important;
+    }
+}
+
+/* Fix for iOS devices */
+@supports (-webkit-touch-callout: none) {
+    div[style*="backdrop-filter: blur(10px)"] {
+        backdrop-filter: none !important;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    section[style*="max-width: 1400px"] {
+        max-width: 1600px !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    section {
+        break-inside: avoid;
+    }
+    button {
+        display: none !important;
+    }
+}
+</style>
 
 <section style="margin: 0; padding: 100px 5% 120px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; position: relative; overflow: hidden; margin-top: 0rem;">
 
@@ -7,28 +575,28 @@
     <div style="position: absolute; top: 0; left: 0; width: 40%; height: 100%; background-color: #363558; clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); opacity: 0.05;"></div>
     <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; background-color: #DD3134; opacity: 0.05;"></div>
 
-    <div style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
+    <div class="reports-container" style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
 
         <!-- Hero Section -->
         <div style="text-align: center; margin-bottom: 80px;">
-            <div style="display: inline-block; padding: 10px 30px; background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(221,49,52,0.3);">
+            <div class="reports-hero-badge" style="display: inline-block; padding: 10px 30px; background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(221,49,52,0.3);">
                 <svg style="width: 16px; height: 16px; fill: white; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                 </svg>
                 TRANSPARENCY & ACCOUNTABILITY
             </div>
             
-            <h1 style="font-size: 70px; line-height: 1.05; margin: 0 0 25px 0; color: #363558; font-weight: 800; letter-spacing: -1.5px;">
+            <h1 class="reports-hero-title" style="font-size: 70px; line-height: 1.05; margin: 0 0 25px 0; color: #363558; font-weight: 800; letter-spacing: -1.5px;">
                 Program <span style="color: #DD3134;">Reports</span>
             </h1>
             
-            <p style="font-size: 20px; line-height: 1.6; color: #5a5a5a; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Access comprehensive reports detailing SafeMoms Navigator's impact, financial transparency, program outcomes, and strategic progress.
+            <p class="reports-hero-text" style="font-size: 20px; line-height: 1.6; color: #5a5a5a; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Access comprehensive reports detailing safeMom Navigator's impact, financial transparency, program outcomes, and strategic progress.
             </p>
             
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <div class="reports-hero-btn-container" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
                 <a href="#annual-reports" style="text-decoration: none;">
-                    <button style="background: linear-gradient(90deg, #363558, #434961); color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
+                    <button class="reports-hero-btn" style="background: linear-gradient(90deg, #363558, #434961); color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
                         <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                             <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.1h-15V5h15v14.1zm0-16.1h-15c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
                         </svg>
@@ -36,7 +604,7 @@
                     </button>
                 </a>
                 <a href="#financial-reports" style="text-decoration: none;">
-                    <button style="background: white; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                    <button class="reports-hero-btn" style="background: white; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
                         <svg style="width: 20px; height: 20px; fill: #363558;" viewBox="0 0 24 24">
                             <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
                         </svg>
@@ -86,7 +654,7 @@
                     </div>
 
                     <div style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 35px 30px; text-align: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                        <div style="font-size: 42px; font-weight: 800; color: #808FBD; margin-bottom: 15px;">4.8/5</div>
+                        <div style="font-size: 42px; font-weight: 800; color: #373358; margin-bottom: 15px;">4.8/5</div>
                         <h3 style="font-size: 20px; color: white; margin: 0 0 10px 0; font-weight: 700;">Stakeholder Rating</h3>
                         <p style="color: #DCCEC1; margin: 0; font-size: 15px; line-height: 1.5;">
                             Report clarity and transparency rating
@@ -110,7 +678,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
 
                 <!-- Report 2023 -->
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; border-top: 5px solid #DD3134;">
+                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; border-top: 5px solid #373358;">
                     <div style="height: 250px; background: linear-gradient(135deg, #363558, #434961); position: relative; overflow: hidden;">
                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 30% 30%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%; padding: 0 30px;">
@@ -231,7 +799,7 @@
 
                 <!-- Report 2021 -->
                 <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; border-top: 5px solid #91746E;">
-                    <div style="height: 250px; background: linear-gradient(135deg, #91746E, #DCCEC1); position: relative; overflow: hidden;">
+                    <div style="height: 250px; background: #91746E; position: relative; overflow: hidden;">
                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 30% 70%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%; padding: 0 30px;">
                             <div style="font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #363558;">ANNUAL REPORT</div>
@@ -291,176 +859,8 @@
 
             </div>
 
-            <!-- View All Button -->
-            <div style="text-align: center;">
-                <button style="background: transparent; color: #363558; border: 2px solid #363558; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
-                    View All Annual Reports
-                    <svg style="width: 20px; height: 20px; fill: #363558;" viewBox="0 0 24 24">
-                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                    </svg>
-                </button>
-            </div>
         </div>
 
-        <!-- Financial Reports -->
-        <div id="financial-reports" style="margin-bottom: 100px;">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 52px; color: #363558; margin: 0 0 20px 0; font-weight: 800; letter-spacing: -0.5px;">
-                    Financial <span style="color: #46DE48;">Transparency</span>
-                </h2>
-                <p style="font-size: 19px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6;">
-                    Detailed financial reports showcasing responsible stewardship of resources and donor funds
-                </p>
-            </div>
-
-            <div style="background: white; border-radius: 30px; padding: 60px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
-                <!-- Financial Overview -->
-                <div style="margin-bottom: 60px;">
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
-                        <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
-                            <svg style="width: 32px; height: 32px; fill: #46DE48;" viewBox="0 0 24 24">
-                                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: 32px; color: #363558; margin: 0; font-weight: 800;">Financial Overview 2023</h3>
-                    </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin-bottom: 40px;">
-                        <div style="text-align: center; padding: 30px 20px; background: #f8f9fa; border-radius: 20px;">
-                            <div style="font-size: 36px; font-weight: 800; color: #DD3134; margin-bottom: 10px;">$850K</div>
-                            <div style="color: #363558; font-weight: 700; margin-bottom: 8px;">Total Revenue</div>
-                            <div style="color: #5a5a5a; font-size: 14px;">Grants, donations, partnerships</div>
-                        </div>
-
-                        <div style="text-align: center; padding: 30px 20px; background: #f8f9fa; border-radius: 20px;">
-                            <div style="font-size: 36px; font-weight: 800; color: #46DE48; margin-bottom: 10px;">92%</div>
-                            <div style="color: #363558; font-weight: 700; margin-bottom: 8px;">Program Spending</div>
-                            <div style="color: #5a5a5a; font-size: 14px;">Direct program implementation</div>
-                        </div>
-
-                        <div style="text-align: center; padding: 30px 20px; background: #f8f9fa; border-radius: 20px;">
-                            <div style="font-size: 36px; font-weight: 800; color: #91746E; margin-bottom: 10px;">6%</div>
-                            <div style="color: #363558; font-weight: 700; margin-bottom: 8px;">Administrative Costs</div>
-                            <div style="color: #5a5a5a; font-size: 14px;">Management and operations</div>
-                        </div>
-
-                        <div style="text-align: center; padding: 30px 20px; background: #f8f9fa; border-radius: 20px;">
-                            <div style="font-size: 36px; font-weight: 800; color: #808FBD; margin-bottom: 10px;">2%</div>
-                            <div style="color: #363558; font-weight: 700; margin-bottom: 8px;">Fundraising Costs</div>
-                            <div style="color: #5a5a5a; font-size: 14px;">Resource mobilization</div>
-                        </div>
-                    </div>
-
-                    <!-- Financial Report Cards -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                        <div style="border: 2px solid #46DE48; border-radius: 20px; padding: 30px;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
-                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 20px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Audited Financial Statements</h4>
-                                    <div style="color: #46DE48; font-size: 13px; font-weight: 600;">FY 2023 • KPMG Audited</div>
-                                </div>
-                            </div>
-                            <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
-                                Complete audited financial statements including balance sheet, income statement, and cash flow statement.
-                            </p>
-                            <button style="background: linear-gradient(90deg, #46DE48, #80E681); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                                <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
-                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                                </svg>
-                                Download Full Audit
-                            </button>
-                        </div>
-
-                        <div style="border: 2px solid #DD3134; border-radius: 20px; padding: 30px;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(221,49,52,0.1); color: #DD3134; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #DD3134;" viewBox="0 0 24 24">
-                                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 20px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Donor Reports</h4>
-                                    <div style="color: #DD3134; font-size: 13px; font-weight: 600;">Quarterly • Detailed</div>
-                                </div>
-                            </div>
-                            <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
-                                Comprehensive reports to donors detailing fund utilization, impact achieved, and future plans.
-                            </p>
-                            <button style="background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                                <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
-                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                                </svg>
-                                Download Donor Reports
-                            </button>
-                        </div>
-
-                        <div style="border: 2px solid #808FBD; border-radius: 20px; padding: 30px;">
-                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #808FBD;" viewBox="0 0 24 24">
-                                        <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.1h-15V5h15v14.1zm0-16.1h-15c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 style="font-size: 20px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Budget vs. Actual Reports</h4>
-                                    <div style="color: #808FBD; font-size: 13px; font-weight: 600;">Monthly • Comparative</div>
-                                </div>
-                            </div>
-                            <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5; margin-bottom: 20px;">
-                                Detailed comparison of budgeted vs. actual expenditures across all program areas and activities.
-                            </p>
-                            <button style="background: linear-gradient(90deg, #808FBD, #A3B4E0); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                                <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
-                                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                                </svg>
-                                Download Budget Reports
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Financial Transparency Badges -->
-                <div style="text-align: center; padding: 40px; background: #f8f9fa; border-radius: 20px;">
-                    <h4 style="font-size: 22px; color: #363558; margin: 0 0 30px 0; font-weight: 700;">Financial Transparency Accreditations</h4>
-                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-                        <div style="text-align: center;">
-                            <div style="background: white; width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-                                <svg style="width: 40px; height: 40px; fill: #46DE48;" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
-                            </div>
-                            <div style="font-weight: 700; color: #363558;">GuideStar Platinum</div>
-                            <div style="color: #5a5a5a; font-size: 13px;">Transparency 2024</div>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <div style="background: white; width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-                                <svg style="width: 40px; height: 40px; fill: #DD3134;" viewBox="0 0 24 24">
-                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                                </svg>
-                            </div>
-                            <div style="font-weight: 700; color: #363558;">Annual Audit</div>
-                            <div style="color: #5a5a5a; font-size: 13px;">KPMG Certified</div>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <div style="background: white; width: 80px; height: 80px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
-                                <svg style="width: 40px; height: 40px; fill: #91746E;" viewBox="0 0 24 24">
-                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                                </svg>
-                            </div>
-                            <div style="font-weight: 700; color: #363558;">4.9/5 Rating</div>
-                            <div style="color: #5a5a5a; font-size: 13px;">Donor Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Program Reports -->
         <div style="margin-bottom: 100px;">
@@ -520,22 +920,22 @@
                     </button>
                 </div>
 
-                <div style="background: white; border-radius: 25px; padding: 35px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-left: 5px solid #808FBD;">
+                <div style="background: white; border-radius: 25px; padding: 35px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-left: 5px solid #373358;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
-                        <div style="background: rgba(128,143,189,0.1); color: #808FBD; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                            <svg style="width: 28px; height: 28px; fill: #808FBD;" viewBox="0 0 24 24">
+                        <div style="background: rgba(128,143,189,0.1); color: #373358; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg style="width: 28px; height: 28px; fill: #373358;" viewBox="0 0 24 24">
                                 <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.1h-15V5h15v14.1zm0-16.1h-15c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 style="font-size: 24px; color: #363558; margin: 0 0 5px 0; font-weight: 800;">Regional Expansion Analysis</h3>
-                            <div style="color: #808FBD; font-size: 14px; font-weight: 600;">New Districts • 2023</div>
+                            <div style="color: #373358; font-size: 14px; font-weight: 600;">New Districts • 2023</div>
                         </div>
                     </div>
                     <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 30px;">
                         Evaluation of program expansion into new districts, challenges faced, and lessons learned for scale-up.
                     </p>
-                    <button style="background: linear-gradient(90deg, #808FBD, #A3B4E0); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <button style="background: linear-gradient(90deg, #373358, #A3B4E0); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
                         <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
