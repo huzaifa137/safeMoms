@@ -675,7 +675,7 @@ a[style*="padding: 20px 50px; border-radius: 60px; font-weight: 900; font-size: 
 
             <!-- Buttons with hover animations -->
             <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 45px;">
-                <a href="javascript:void()" style="background: #D83137; color: white; text-decoration: none; padding: clamp(14px, 3vw, 18px) clamp(25px, 4vw, 40px); border-radius: 50px; font-weight: 800; font-size: clamp(14px, 2.5vw, 16px); display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(216,49,55,0.3); transition: all 0.3s ease; white-space: nowrap;"
+                <a href="{{url('become-a-volunteer')}}" style="background: #D83137; color: white; text-decoration: none; padding: clamp(14px, 3vw, 18px) clamp(25px, 4vw, 40px); border-radius: 50px; font-weight: 800; font-size: clamp(14px, 2.5vw, 16px); display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(216,49,55,0.3); transition: all 0.3s ease; white-space: nowrap;"
                    onmouseover="this.style.background='#b8272a'; this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 35px rgba(216,49,55,0.4)'"
                    onmouseout="this.style.background='#D83137'; this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(216,49,55,0.3)'">
                     Enroll Now <span style="font-size: clamp(16px, 2.5vw, 20px); transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">→</span>
@@ -1300,12 +1300,12 @@ a[style*="padding: 20px 50px; border-radius: 60px; font-weight: 900; font-size: 
             </p>
 
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="javascript:void()" style="background: #46DE48; color: #363558; text-decoration: none; padding: 20px 50px; border-radius: 60px; font-weight: 900; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); transition: all 0.3s ease;"
+                <a href="{{ url('become-a-navigator')}}" style="background: #46DE48; color: #363558; text-decoration: none; padding: 20px 50px; border-radius: 60px; font-weight: 900; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); transition: all 0.3s ease;"
                    onmouseover="this.style.background='#80E681'; this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(0,0,0,0.3)'"
                    onmouseout="this.style.background='#46DE48'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'">
                     <i class="bi bi-heart-fill"></i> Enroll in Safe Pregnancy
                 </a>
-                <a href="javascript:void()" style="background: rgba(255,255,255,0.15); color: white; text-decoration: none; padding: 20px 50px; border-radius: 60px; font-weight: 700; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;"
+                <a href="{{ url('become-a-navigator')}}" style="background: rgba(255,255,255,0.15); color: white; text-decoration: none; padding: 20px 50px; border-radius: 60px; font-weight: 700; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;"
                    onmouseover="this.style.background='rgba(255,255,255,0.25)'; this.style.borderColor='#46DE48'; this.style.transform='translateY(-5px)'"
                    onmouseout="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)'">
                     <i class="bi bi-telephone-fill"></i> Talk to a Navigator

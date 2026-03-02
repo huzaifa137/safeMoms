@@ -195,12 +195,140 @@
             }
         }
 
-        /* Remove all other styles that might affect leadership section */
-        /* DO NOT include any .leadership-grid, .leader-card, etc. styles here */
+.leader-image-container {
+    position: relative;
+    height: 260px; /* Increase height to accommodate the tag */
+    overflow: hidden;
+    margin-top: 10px; /* Add space at the top */
+}
+
+.leader-tag {
+    position: absolute;
+    top: -8px; /* Slight negative offset but not too much */
+    left: 20px;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Add this at the end of your styles */
+/* Fix for leader-tag being cut off */
+.leader-image-container {
+    position: relative;
+    height: 240px;
+    overflow: visible !important; /* Changed from overflow: hidden */
+}
+
+.leader-tag {
+    position: absolute;
+    top: 10px !important; /* Changed from negative to positive */
+    left: 20px;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Fix for long names and text wrapping */
+.leader-content h4 {
+    margin: 10px 0 3px 0 !important;
+    font-size: 18px !important; /* Slightly smaller */
+    font-weight: 800;
+    color: #363558;
+    line-height: 1.3;
+    word-break: break-word; /* Allow long names to break */
+}
+
+.leader-content div[style*="color"] {
+    margin-bottom: 10px !important;
+    font-size: 13px !important; /* Smaller */
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.leader-content p {
+    font-size: 12px !important; /* Smaller */
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+    color: #5a5a5a;
+    word-break: break-word;
+}
+
+.leader-content div[style*="border-top"] {
+    padding-top: 10px !important;
+    font-size: 11px !important;
+    color: #373358;
+    font-weight: 600;
+    border-top: 1px solid #f0f0f0;
+    white-space: nowrap; /* Keep experience text on one line */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ... if too long */
+}
+
+/* Fix for the duplicate CSS you have */
+/* Remove or override the conflicting styles */
+.leader-image-container[style*="height: 260px"] {
+    height: 240px !important; /* Override the 260px */
+    margin-top: 0 !important; /* Remove the extra margin */
+}
+
+/* Fix for the badge positioning */
+.leader-badge {
+    top: 10px !important; /* Adjusted */
+    right: 10px !important;
+    width: 35px !important; /* Slightly smaller */
+    height: 35px !important;
+    font-size: 14px !important;
+    z-index: 15;
+}
+
+/* Ensure all text is visible */
+.leader-card {
+    overflow: visible !important; /* Allow tags to show */
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .leader-content h4 {
+        font-size: 16px !important;
+    }
+    
+    .leader-content div[style*="color"] {
+        font-size: 12px !important;
+    }
+    
+    .leader-content p {
+        font-size: 11px !important;
+    }
+    
+    .leader-tag {
+        top: 8px !important;
+        left: 15px !important;
+        padding: 3px 12px !important;
+        font-size: 10px !important;
+    }
+    
+    .leader-badge {
+        top: 8px !important;
+        right: 8px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 12px !important;
+    }
+}
     </style>
 
     <div
-        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #E7E9ED 0%, #d2e0ed 100%);">
+        style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg, #FFF 0%, #e3e9ee 100%);">
 
         <section class="hero-section">
             <div
@@ -242,12 +370,12 @@
                 <div style="text-align: center; margin-bottom: clamp(25px, 4vw, 50px); padding: 0 20px;">
                     <!-- Reduced from clamp(40px, 6vw, 80px) -->
                     <div
-                        style="display: inline-block; padding: 8px clamp(18px, 2.5vw, 24px); background: rgba(221,49,52,0.1); color: #363558; border-radius: 30px; font-size: clamp(11px, 1.3vw, 13px); font-weight: 700; margin-bottom: 15px; border: 1px solid rgba(221,49,52,0.2);">
+                        style="display: inline-block; padding: 8px clamp(18px, 2.5vw, 24px); background: rgba(221,49,52,0.1); color: #363558; border-radius: 30px; font-size: clamp(11px, 1.3vw, 13px); font-weight: 700; margin-bottom: 15px; border: 1px solid #DD3134;">
                         <!-- Reduced padding and margin -->
                         LEADERSHIP TEAM
                     </div>
                     <h3 style="font-size: clamp(28px, 3.5vw, 42px); color: #363558; margin-bottom: 15px; font-weight: 800;">
-                        Our <span style="color: #DD3134;">Leadership</span></h3> <!-- Reduced font size and margin -->
+                        Our <span style="color: #363558;">Leadership</span></h3> <!-- Reduced font size and margin -->
                     <p style="color: #5a5a5a; max-width: 700px; margin: 0 auto; font-size: clamp(15px, 1.8vw, 17px);">
                         <!-- Reduced font size -->
                         Powered by a diverse team of leaders who bring passion, expertise, and lived experience to maternal

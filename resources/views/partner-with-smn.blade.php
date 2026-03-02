@@ -1480,14 +1480,14 @@ form button[type="submit"][style*="padding: 18px; border-radius: 12px; font-size
                         Universities and research organizations collaborating on maternal health studies, program
                         evaluation, and innovation development.
                     </p>
-                    <button class="pulse-element"
-                        style="background: #D83137; color: white; border: none; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                    <a href="{{ url('Research-and-Publications') }}" class="pulse-element"
+                        style="background: #D83137; color: white; border: none; padding: 14px 30px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;text-decoration:none;">
                         <svg style="width: 18px; height: 18px; fill: white;" viewBox="0 0 24 24">
                             <path
                                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                         </svg>
                         Explore Research Partnership
-                    </button>
+                    </a>
                 </div>
             </div>
 

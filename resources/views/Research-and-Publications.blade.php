@@ -1224,15 +1224,15 @@ h4[style*="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700"
                 Looking for specific resources or have suggestions for materials we should develop? Let us know!
             </p>
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <button style="background: #D83137; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 12px;">
+                <a href="{{ url('contact') }}" style="text-decoration:none;background: #D83137; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 12px;">
                     <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                         <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                     Request Resources
-                </button>
-                <button style="background: transparent; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer;">
+</a>
+                <a href="{{ url('contact') }}" style="text-decoration:none; background: transparent; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer;">
                     Contact Resource Team
-                </button>
+</a>
             </div>
         </div>
 

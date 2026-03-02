@@ -1107,13 +1107,13 @@ a[style*="padding: 22px 55px; border-radius: 60px; font-size: 18px"] {
             </p>
 
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeSlideUp 0.8s ease; animation-delay: 0.4s; animation-fill-mode: both;">
-                <a href="javascript:void()" 
+                <a href="{{url('SafeDelivery')}}" 
                    style="background: #46DE48; color: #363558; text-decoration: none; padding: 22px 55px; border-radius: 60px; font-weight: 900; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 15px 40px rgba(70,222,72,0.3); transition: all 0.3s ease;"
                    onmouseover="this.style.background='#80E681'; this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 25px 50px rgba(70,222,72,0.5)'"
                    onmouseout="this.style.background='#46DE48'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 40px rgba(70,222,72,0.3)'">
                     <i class="bi bi-shield-check" style="font-size: 22px;"></i> Support Safe Delivery
                 </a>
-                <a href="javascript:void()" 
+                <a href="{{url('SafeDelivery')}}"
                    style="background: rgba(255,255,255,0.1); color: white; text-decoration: none; padding: 22px 55px; border-radius: 60px; font-weight: 700; font-size: 18px; display: inline-flex; align-items: center; gap: 12px; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s ease;"
                    onmouseover="this.style.background='rgba(255,255,255,0.2)'; this.style.borderColor='#46DE48'; this.style.transform='translateY(-5px)'"
                    onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)'">
