@@ -1,6 +1,178 @@
 @extends('layouts.apps')
 @section('content')
 
+<style>
+  /* Donation Page - Compact Spacing */
+section:first-of-type {
+  padding: clamp(30px, 5vw, 60px) clamp(15px, 4vw, 5%) clamp(30px, 5vw, 60px) !important;
+}
+
+/* Reduce hero section spacing */
+section:first-of-type > div > div:first-child {
+  margin-bottom: clamp(20px, 4vw, 40px) !important;
+}
+
+/* Donation options container */
+#donation-options {
+  margin-bottom: clamp(30px, 5vw, 50px) !important;
+}
+
+/* Donation card padding */
+#donation-options > div:first-child {
+  padding: clamp(20px, 3vw, 30px) !important;
+}
+
+/* Reduce gaps between sections */
+#donation-options h3 {
+  margin-bottom: clamp(15px, 2.5vw, 20px) !important;
+}
+
+/* Amount section spacing */
+#donation-options [style*="margin-bottom: clamp(20px, 4vw, 30px)"] {
+  margin-bottom: 15px !important;
+}
+
+/* Preset buttons container */
+#preset-amounts {
+  margin-bottom: 12px !important;
+  gap: 8px !important;
+}
+
+/* Preset buttons */
+.amount-btn {
+  padding: 8px 12px !important;
+  font-size: clamp(13px, 2vw, 14px) !important;
+}
+
+/* Custom amount row */
+#donation-options [style*="display: flex; gap: clamp(10px, 2vw, 15px); flex-wrap: wrap;"] {
+  gap: 10px !important;
+}
+
+/* Frequency section spacing */
+#donation-options [style*="margin-bottom: clamp(20px, 4vw, 30px);"]:nth-of-type(2) {
+  margin-bottom: 15px !important;
+}
+
+/* Frequency buttons */
+.freq-btn {
+  padding: 10px 15px !important;
+  font-size: clamp(12px, 2vw, 13px) !important;
+}
+
+/* Designation section */
+#donation-options [style*="margin-bottom: clamp(20px, 4vw, 30px);"]:nth-of-type(3) {
+  margin-bottom: 15px !important;
+}
+
+/* Designation dropdown */
+#designation {
+  padding: 12px 15px !important;
+}
+
+/* Payment button */
+#payment-button {
+  padding: 14px !important;
+  font-size: clamp(15px, 2.5vw, 16px) !important;
+}
+
+/* Urgent Call to Action section */
+section:first-of-type > div > div:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Urgent CTA card */
+section:first-of-type [style*="background: linear-gradient(135deg, #DD3134, #FF6B6B)"] {
+  padding: clamp(20px, 4vw, 30px) !important;
+  margin-bottom: 0 !important;
+}
+
+/* Urgent CTA inner grid */
+section:first-of-type [style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr))"] {
+  gap: clamp(20px, 3vw, 30px) !important;
+}
+
+/* Stats card in urgent CTA */
+section:first-of-type [style*="background: rgba(255,255,255,0.1)"] {
+  padding: clamp(15px, 3vw, 25px) !important;
+}
+
+/* Progress bar container */
+section:first-of-type [style*="height: 10px; background: rgba(255,255,255,0.2)"] {
+  margin-bottom: 12px !important;
+}
+
+/* All paragraph margins */
+p {
+  margin-bottom: 15px !important;
+}
+
+/* Reduce heading sizes if needed */
+h1 {
+  font-size: clamp(32px, 6vw, 50px) !important;
+  margin-bottom: 10px !important;
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 36px) !important;
+  margin-bottom: 10px !important;
+}
+
+/* Feedback div spacing */
+#selection-feedback {
+  margin-top: 10px !important;
+  font-size: 13px !important;
+}
+
+/* Remove any extra bottom margins from last elements */
+#payment-button {
+  margin-bottom: 0 !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  /* Further reduce spacing on mobile */
+  section:first-of-type {
+    padding: 20px 15px 30px !important;
+  }
+  
+  .amount-btn {
+    padding: 8px 10px !important;
+    min-width: 50px !important;
+  }
+  
+  #preset-amounts {
+    gap: 6px !important;
+  }
+  
+  .freq-btn {
+    padding: 8px 12px !important;
+    min-width: 80px !important;
+  }
+  
+  section:first-of-type [style*="background: linear-gradient(135deg, #DD3134, #FF6B6B)"] {
+    padding: 20px 15px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Small phone optimizations */
+  #preset-amounts {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  #frequency-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  
+  .freq-btn {
+    width: 100% !important;
+  }
+}
+</style>
 <section style="margin: 0; padding: clamp(40px, 8vw, 100px) clamp(20px, 5vw, 5%) clamp(40px, 6vw, 120px); font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; position: relative; overflow: hidden; margin-top: 0rem;">
 
     <!-- Geometric background elements -->
@@ -11,7 +183,7 @@
 
         <!-- Hero Section -->
         <div style="text-align: center; margin-bottom: clamp(40px, 8vw, 80px); padding: 0 clamp(10px, 3vw, 0);">
-            <div style="display: inline-block; padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 30px); background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border-radius: 30px; font-size: clamp(12px, 2.5vw, 14px); font-weight: 700; margin-bottom: clamp(15px, 3vw, 25px); letter-spacing: 0.5px; box-shadow: 0 8px 20px rgba(221,49,52,0.3);">
+            <div style="display: inline-block; padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 30px); background: linear-gradient(90deg, #DD3134, #DD3134); color: white; border-radius: 30px; font-size: clamp(12px, 2.5vw, 14px); font-weight: 700; margin-bottom: clamp(15px, 3vw, 25px); letter-spacing: 0.5px; box-shadow: 0 8px 20px rgba(221,49,52,0.3);">
                 <svg style="width: clamp(14px, 2vw, 16px); height: clamp(14px, 2vw, 16px); fill: white; vertical-align: middle; margin-right: 6px;" viewBox="0 0 24 24">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
@@ -19,7 +191,7 @@
             </div>
             
             <h1 style="font-size: clamp(36px, 7vw, 70px); line-height: 1.1; margin: 0 0 clamp(15px, 3vw, 25px) 0; color: #363558; font-weight: 800; letter-spacing: -0.5px;">
-                Donate to <span style="color: #DD3134;">Save Mothers</span>
+                Donate to <span style="color: #363558;">Save Mothers</span>
             </h1>
             
             <p style="font-size: clamp(16px, 3vw, 20px); line-height: 1.6; color: #5a5a5a; margin-bottom: clamp(30px, 5vw, 50px); max-width: 100%;">
@@ -70,7 +242,7 @@
         <div style="margin-bottom: clamp(20px, 4vw, 30px);">
           <label style="display: block; color: #363558; font-size: clamp(14px, 2.5vw, 16px); font-weight: 600; margin-bottom: clamp(10px, 2vw, 15px);">Giving Frequency</label>
           <div id="frequency-buttons" style="display: flex; gap: clamp(10px, 2vw, 15px); flex-wrap: wrap;">
-            <button class="freq-btn" style="background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border: none; padding: clamp(12px, 2vw, 14px) clamp(15px, 3vw, 25px); border-radius: 10px; font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; cursor: pointer; flex: 1 1 auto; min-width: 100px;" data-frequency="one-time">One-time</button>
+            <button class="freq-btn" style="background: #DD3134; color: white; border: none; padding: clamp(12px, 2vw, 14px) clamp(15px, 3vw, 25px); border-radius: 10px; font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; cursor: pointer; flex: 1 1 auto; min-width: 100px;" data-frequency="one-time">One-time</button>
             <button class="freq-btn" style="background: #f8f9fa; color: #363558; border: 2px solid #e0e0e0; padding: clamp(12px, 2vw, 14px) clamp(15px, 3vw, 25px); border-radius: 10px; font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; cursor: pointer; flex: 1 1 auto; min-width: 100px;" data-frequency="monthly">Monthly</button>
             <button class="freq-btn" style="background: #f8f9fa; color: #363558; border: 2px solid #e0e0e0; padding: clamp(12px, 2vw, 14px) clamp(15px, 3vw, 25px); border-radius: 10px; font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; cursor: pointer; flex: 1 1 auto; min-width: 100px;" data-frequency="quarterly">Quarterly</button>
           </div>
@@ -90,7 +262,7 @@
         </div>
 
         <!-- PAYMENT BUTTON (now shows summary on click) -->
-        <button id="payment-button" style="background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border: none; padding: clamp(16px, 3vw, 20px); border-radius: 12px; font-size: clamp(16px, 3vw, 18px); font-weight: 800; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: clamp(8px, 2vw, 12px); box-shadow: 0 10px 25px rgba(221,49,52,0.3);">
+        <button id="payment-button" style="background: #DD3134; color: white; border: none; padding: clamp(16px, 3vw, 20px); border-radius: 12px; font-size: clamp(16px, 3vw, 18px); font-weight: 800; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: clamp(8px, 2vw, 12px); box-shadow: 0 10px 25px rgba(221,49,52,0.3);">
           <svg style="width: clamp(18px, 3vw, 22px); height: clamp(18px, 3vw, 22px); fill: white;" viewBox="0 0 24 24">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
@@ -369,7 +541,7 @@
 -->
 
               <!-- Urgent Call to Action -->
-        <div style="background: linear-gradient(135deg, #DD3134, #FF6B6B); border-radius: clamp(20px, 4vw, 30px); padding: clamp(30px, 6vw, 60px); margin-bottom: clamp(40px, 8vw, 80px); position: relative; overflow: hidden;">
+        <div style="background: linear-gradient(135deg, #DD3134, #DD3134); border-radius: clamp(20px, 4vw, 30px); padding: clamp(30px, 6vw, 60px); margin-bottom: clamp(40px, 8vw, 80px); position: relative; overflow: hidden;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 20% 80%, white 2px, transparent 2px); background-size: 40px 40px; display: none;"></div>
             
             <div style="position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: clamp(30px, 5vw, 60px); align-items: center;">
@@ -382,7 +554,7 @@
                     </div>
                     
                     <h2 style="font-size: clamp(28px, 5vw, 52px); color: white; margin: 0 0 clamp(15px, 3vw, 20px) 0; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2;">
-                        Every <span style="color: #363558;">$50</span> Sponsors a Mother's Journey
+                        Every <span style="color: #FFF;">$50</span> Sponsors a Mother's Journey
                     </h2>
                     
                     <p style="font-size: clamp(16px, 3vw, 18px); color: rgba(255,255,255,0.9); line-height: 1.6; margin-bottom: clamp(20px, 4vw, 30px);">
@@ -415,7 +587,7 @@
                             <div>65% Funded</div>
                         </div>
                         
-                        <button style="background: linear-gradient(90deg, #46DE48, #80E681); color: white; border: none; padding: clamp(14px, 2.5vw, 16px); border-radius: 12px; font-size: clamp(14px, 2.5vw, 16px); font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <button style="background: linear-gradient(90deg, #46DE48, #46DE48); color: white; border: none; padding: clamp(14px, 2.5vw, 16px); border-radius: 12px; font-size: clamp(14px, 2.5vw, 16px); font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
                             <svg style="width: clamp(16px, 2.5vw, 18px); height: clamp(16px, 2.5vw, 18px); fill: white;" viewBox="0 0 24 24">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                             </svg>

@@ -62,23 +62,6 @@
             background: linear-gradient(135deg, var(--accent-red), #ff6b6b);
         }
 
-        .social-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
         /* Navbar */
         .navbar {
             background: white;
@@ -125,7 +108,7 @@
         }
 
         .donate-btn {
-            background: #D83137 ;
+            background: #D83137;
             color: white !important;
             border-radius: 5px;
             padding: 0.5rem 1.5rem;
@@ -172,6 +155,39 @@
             margin-bottom: 10px;
         }
 
+        /* Footer Social Icons - Enhanced */
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .footer-social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-facebook { background: linear-gradient(135deg, #4267B2, #3b5998); }
+        .social-linkedin { background: linear-gradient(135deg, #0077B5, #006699); }
+        .social-tiktok { background: linear-gradient(135deg, #FF0000, #cc0000); }
+        .social-twitter { background: linear-gradient(135deg, #1DA1F2, #1a91da); }
+        .social-instagram { background: linear-gradient(135deg, #E4405F, #D62E4E); }
+        .social-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+
         @media (max-width: 992px) {
             .navbar-nav .nav-link {
                 padding: 0.5rem 1rem;
@@ -180,10 +196,6 @@
             .contact-info {
                 justify-content: center !important;
                 margin-bottom: 10px;
-            }
-
-            .social-icons {
-                justify-content: center !important;
             }
         }
 
@@ -197,12 +209,17 @@
             .navbar-brand img {
                 height: 40px;
             }
+            
+            .footer-social {
+                justify-content: center;
+            }
         }
+        
     </style>
 </head>
 
 <body>
-    <!-- Top Contact Bar -->
+    <!-- Top Contact Bar - Social Media Removed -->
     <div class="top-bar">
         <div class="container">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -213,7 +230,7 @@
                         </div>
                         <div>
                             <div style="font-size: 11px; opacity: 0.8;">Call Us:</div>
-                            <div style="font-size: 14px; font-weight: 600;">+91 9904518814</div>
+                            <div style="font-size: 14px; font-weight: 600;">+256 775 130396 | +1(236)862-7683</div>
                         </div>
                     </div>
 
@@ -223,31 +240,13 @@
                         </div>
                         <div>
                             <div style="font-size: 11px; opacity: 0.8;">Mail Us:</div>
-                            <div style="font-size: 14px; font-weight: 600;">info@safeMom.org</div>
+                            <div style="font-size: 14px; font-weight: 600;">info@safemomug.org</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="d-flex social-icons">
-                    <a href="https://www.facebook.com/..." class="social-icon me-2"
-                        style="background: linear-gradient(135deg, #4267B2, #3b5998);">
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-                    <a href="https://twitter.com/..." class="social-icon me-2"
-                        style="background: linear-gradient(135deg, #1DA1F2, #1a91da);">
-                        <i class="fab fa-twitter"></i>
-
-                    </a>
-                    <a href="http://www.linkedin.com/..." class="social-icon me-2"
-                        style="background: linear-gradient(135deg, #0077B5, #006699);">
-                        <i class="fab fa-linkedin-in"></i>
-
-                    </a>
-                    <a href="#" class="social-icon" style="background: linear-gradient(135deg, #FF0000, #cc0000);">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+                <!-- Empty div to maintain layout balance -->
+                <div></div>
             </div>
         </div>
     </div>
@@ -312,9 +311,6 @@
                             <li><a class="dropdown-item" href="{{ url('Impact') }}">Impact</a></li>
                             <li><a class="dropdown-item" href="{{ url('Research-and-Publications') }}">Research &
                                     Publications</a></li>
-                            <li><a class="dropdown-item" href="{{ url('Resources') }}">Resources</a></li>
-                            <li><a class="dropdown-item" href="{{ url('News') }}">News</a></li>
-                            <li><a class="dropdown-item" href="{{ url('reports') }}">Reports</a></li>
                         </ul>
                     </li>
 
@@ -337,7 +333,7 @@
         @yield('content')
     </main>
 
-    <!-- Footer -->
+    <!-- Footer - Social Media Added Here -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -349,6 +345,28 @@
                         We support mothers, children, and vulnerable families through healthcare,
                         education, and essential community services.
                     </p>
+                    
+                    <!-- Social Media Icons - Moved to Footer -->
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/..." class="footer-social-icon social-facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="http://www.linkedin.com/..." class="footer-social-icon social-linkedin" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="javascript:void()" class="footer-social-icon social-tiktok" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://twitter.com/..." class="footer-social-icon social-twitter" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/..." class="footer-social-icon social-instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/..." class="footer-social-icon social-youtube" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -365,18 +383,18 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <h4>Contact Us</h4>
                     <div class="footer-contacts">
-                        <p><strong>Address:</strong> Buwenda village, Jinja city, Uganda</p>
+                        <p><strong><i class="fas fa-map-marker-alt me-2"></i>Address:</strong> Room 3, Office Floor, Haruna Towers, Kafumbe Mukasa Road, Kampala, Uganda</p>
                         <p><strong><i class="fas fa-phone me-2"></i>Phone:</strong>
-                            +1(236)862-7683/+256 775 130396</p>
+                            +1(236)862-7683 | +256 775 130396</p>
                         <p><strong><i class="fas fa-envelope me-2"></i>Email:</strong>
-                            info@safeMom.org</p>
+                            info@safemomug.org</p>
                     </div>
                 </div>
             </div>
 
             <!-- Scroll to top button -->
             <div class="scroll-to-top" onclick="scrollToTop()">
-                <i>&#8593;</i> <!-- Unicode for upward arrow -->
+                <i>&#8593;</i>
             </div>
 
             <style>
@@ -387,27 +405,29 @@
                     right: 20px;
                     width: 60px;
                     height: 60px;
-                    background-color: red;
+                    background-color: #D83137;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
-                    box-shadow: 0 4px 12px rgba(218, 24, 24, 0.1);
-                    transition: background-color 0.3s;
+                    box-shadow: 0 4px 12px rgba(218, 24, 24, 0.3);
+                    transition: all 0.3s ease;
+                    opacity: 0;
+                    z-index: 1000;
                 }
 
                 .scroll-to-top:hover {
                     background-color: #46416D;
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
                 }
 
                 .scroll-to-top i {
-                    color: #2F2C4D;
-                    /* Arrow color */
+                    color: white;
                     font-size: 30px;
                 }
 
-                /* Smooth scroll behavior */
                 html {
                     scroll-behavior: smooth;
                 }
@@ -418,7 +438,7 @@
                 function scrollToTop() {
                     window.scrollTo({
                         top: 0,
-                        behavior: 'smooth'  // Smooth scrolling effect
+                        behavior: 'smooth'
                     });
                 }
 
@@ -427,20 +447,21 @@
                     var button = document.querySelector('.scroll-to-top');
 
                     if (document.body.scrollTop === 0 && document.documentElement.scrollTop === 0) {
-                        button.style.opacity = '0';  // Hide the button
+                        button.style.opacity = '0';
                     } else {
-                        button.style.opacity = '1';  // Show the button
+                        button.style.opacity = '1';
                     }
                 };
             </script>
+            
             <div class="text-center pt-4 mt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
                 <p>&copy; <span id="year"></span> safeMom. All rights reserved.</p>
+                <p class="small mt-2" style="opacity: 0.7;">Follow us on social media for updates and stories</p>
 
                 <script>
                     const currentYear = new Date().getFullYear();
                     document.getElementById('year').textContent = currentYear;
                 </script>
-
             </div>
         </div>
     </footer>

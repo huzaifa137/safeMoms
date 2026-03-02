@@ -556,8 +556,8 @@
                 </p>
                 
                 <div style="display: flex; align-items: center; gap: 30px;">
-                    <a href="#" class="featured-btn" style="color: white; font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 15px; background: #363558; padding: 20px 40px; border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#DD3134'; this.style.transform='translateY(-5px)'" onmouseout="this.style.backgroundColor='#363558'; this.style.transform='translateY(0)'">Read Full Story <span style="font-size: 24px;">⟶</span></a>
-                    <a href="#" class="featured-share" style="color: #363558; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px;">Share <span style="font-size: 20px;">↗</span></a>
+                    <a href="javascript:void()" class="featured-btn" style="color: white; font-weight: 900; text-decoration: none; display: flex; align-items: center; gap: 15px; background: #363558; padding: 20px 40px; border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#DD3134'; this.style.transform='translateY(-5px)'" onmouseout="this.style.backgroundColor='#363558'; this.style.transform='translateY(0)'">Read Full Story <span style="font-size: 24px;">⟶</span></a>
+                    <a href="javascript:void()" class="featured-share" style="color: #363558; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px;">Share <span style="font-size: 20px;">↗</span></a>
                 </div>
             </div>
         </div>
@@ -579,7 +579,7 @@
                     <p class="news-card-excerpt" style="font-size: 16px; color: #91746E; line-height: 1.7; margin-bottom: 30px;">Our reminder system now supports two additional local languages to improve accessibility.</p>
                     <div class="news-card-footer" style="display: flex; align-items: center; justify-content: space-between; border-top: 2px solid #DCCEC1; padding-top: 25px;">
                         <div class="news-card-date" style="font-size: 14px; color: #373358; font-weight: 800;">Feb 28, 2024</div>
-                        <a href="#" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
+                        <a href="javascript:void()" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
                     </div>
                 </div>
             </div>
@@ -594,7 +594,7 @@
                     <p class="news-card-excerpt" style="font-size: 16px; color: #91746E; line-height: 1.7; margin-bottom: 30px;">Discover how one young leader is transforming maternal health outcomes in her village.</p>
                     <div class="news-card-footer" style="display: flex; align-items: center; justify-content: space-between; border-top: 2px solid #DCCEC1; padding-top: 25px;">
                         <div class="news-card-date" style="font-size: 14px; color: #373358; font-weight: 800;">Feb 12, 2024</div>
-                        <a href="#" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
+                        <a href="javascript:void()" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
                     </div>
                 </div>
             </div>
@@ -609,48 +609,18 @@
                     <p class="news-card-excerpt" style="font-size: 16px; color: #91746E; line-height: 1.7; margin-bottom: 30px;">A new partnership aimed at scaling our low-tech emergency referral model nationwide.</p>
                     <div class="news-card-footer" style="display: flex; align-items: center; justify-content: space-between; border-top: 2px solid #DCCEC1; padding-top: 25px;">
                         <div class="news-card-date" style="font-size: 14px; color: #373358; font-weight: 800;">Jan 25, 2024</div>
-                        <a href="#" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
+                        <a href="javascript:void()" class="news-card-link" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;">READ MORE <span style="font-size: 20px;">→</span></a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="view-all" style="text-align: center; margin-top: 100px;">
-            <div style="display: inline-flex; align-items: center; gap: 20px;">
-                <div class="view-all-line" style="width: 100px; height: 3px; background: linear-gradient(to right, #DD3134, #46DE48);"></div>
-                <a href="#" class="view-all-text" style="color: #363558; font-weight: 900; text-decoration: none; font-size: 18px;">VIEW ALL NEWS ARTICLES</a>
-                <div class="view-all-line" style="width: 100px; height: 3px; background: linear-gradient(to right, #46DE48, #DD3134);"></div>
-            </div>
-        </div>
+
     </section>
 
-    <!-- As Seen In -->
-    <section class="newsroom-section as-seen-section" style="padding: 0 10% 100px 10%;">
-        <div class="as-seen-container" style="background: #363558; border-radius: 30px; padding: 80px 60px; text-align: center; position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 10px; background: linear-gradient(to right, #DD3134, #46DE48, #373358);"></div>
-            
-            <h4 class="as-seen-title" style="font-size: 14px; color: #DCCEC1; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 60px;">AS SEEN IN</h4>
-            
-            <div class="as-seen-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; z-index: 2;">
-                <div class="as-seen-item" style="background: white; border-radius: 20px; padding: 40px 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-                    <span style="font-size: 26px; font-weight: 900; color: #363558;">THE NEW VISION</span>
-                </div>
-                <div class="as-seen-item" style="background: white; border-radius: 20px; padding: 40px 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-                    <span style="font-size: 26px; font-weight: 900; color: #363558;">DAILY MONITOR</span>
-                </div>
-                <div class="as-seen-item" style="background: white; border-radius: 20px; padding: 40px 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-                    <span style="font-size: 26px; font-weight: 900; color: #363558;">NTV UGANDA</span>
-                </div>
-                <div class="as-seen-item" style="background: white; border-radius: 20px; padding: 40px 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 30px rgba(0,0,0,0.1);">
-                    <span style="font-size: 26px; font-weight: 900; color: #363558;">BBC HEALTH</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Newsletter -->
     <section class="newsroom-section newsletter-section" style="padding: 0 10% 120px 10%;">
-        <div class="newsletter-container" style="background: linear-gradient(135deg, #DD3134 0%, #46DE48 100%); border-radius: 40px; padding: 100px 80px; color: white; text-align: center; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(221, 49, 52, 0.3);">
+        <div class="newsletter-container" style="background: #46DE48; border-radius: 40px; padding: 100px 80px; color: white; text-align: center; position: relative; overflow: hidden; box-shadow: 0 30px 60px rgba(221, 49, 52, 0.3);">
             <div style="position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: white; border-radius: 50%; opacity: 0.1;"></div>
             <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: white; border-radius: 50%; opacity: 0.1;"></div>
             

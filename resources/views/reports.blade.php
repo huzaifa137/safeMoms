@@ -737,13 +737,13 @@
                     </div>
                 </div>
 
-                <!-- Report 2022 -->
+                <!-- Report 2023 -->
                 <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative; border-top: 5px solid #46DE48;">
                     <div style="height: 250px; background: linear-gradient(135deg, #46DE48, #80E681); position: relative; overflow: hidden;">
                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: radial-gradient(circle at 70% 70%, white 2px, transparent 2px); background-size: 50px 50px;"></div>
                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%; padding: 0 30px;">
                             <div style="font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #363558;">ANNUAL REPORT</div>
-                            <div style="font-size: 48px; font-weight: 800; line-height: 1;">2022</div>
+                            <div style="font-size: 48px; font-weight: 800; line-height: 1;">2023</div>
                             <div style="font-size: 18px; opacity: 0.9; margin-top: 10px;">Year of Consolidation</div>
                         </div>
                     </div>
@@ -811,7 +811,7 @@
                     <div style="padding: 35px 30px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
                             <div>
-                                <div style="color: #91746E; font-size: 14px; font-weight: 700; margin-bottom: 5px;">PUBLISHED: MARCH 2022</div>
+                                <div style="color: #91746E; font-size: 14px; font-weight: 700; margin-bottom: 5px;">PUBLISHED: MARCH 2023</div>
                                 <div style="color: #5a5a5a; font-size: 14px;">118 Pages • Program Launch</div>
                             </div>
                             <div style="background: rgba(145,116,110,0.1); color: #91746E; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 700;">

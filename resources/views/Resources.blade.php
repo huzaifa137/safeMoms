@@ -406,7 +406,7 @@
                                 </div>
 
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #DD3134, #ff6b6b); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(221,49,52,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -451,7 +451,7 @@
                                     <span style="font-size: 13px; color: #373358; font-weight: 600;">0.8 MB</span>
                                 </div>
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #91746E, #DCCEC1); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(145,116,110,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -496,7 +496,7 @@
                                     <span style="font-size: 13px; color: #373358; font-weight: 600;">1.2 MB</span>
                                 </div>
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #46DE48, #80E681); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(70,222,72,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -541,7 +541,7 @@
                                     <span style="font-size: 13px; color: #373358; font-weight: 600;">8.5 MB</span>
                                 </div>
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #373358, #A3B4E0); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(128,143,189,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -586,7 +586,7 @@
                                     <span style="font-size: 13px; color: #373358; font-weight: 600;">3.1 MB</span>
                                 </div>
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #DD3134, #ff6b6b); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(221,49,52,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -631,7 +631,7 @@
                                     <span style="font-size: 13px; color: #373358; font-weight: 600;">1.8 MB</span>
                                 </div>
                             </div>
-                            <a href="#" class="resource-download-btn"
+                            <a href="javascript:void()" class="resource-download-btn"
                                 style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #46DE48, #80E681); color: white; text-decoration: none; padding: 12px 24px; border-radius: 20px; font-weight: 800; font-size: 14px; box-shadow: 0 10px 20px rgba(70,222,72,0.2); transition: all 0.3s ease;">
                                 Download <i class="bi bi-download" style="font-size: 18px;"></i>
                             </a>
@@ -778,7 +778,7 @@
                                     We partner with health facilities, NGOs, government agencies, and corporate
                                     organizations. Partnership opportunities include program implementation, funding,
                                     research collaboration, and advocacy. Contact our partnerships team at
-                                    partnerships@safeMom.org
+                                    partnerships@safemomug.org
                                 </div>
                             </div>
                             <div class="faq-toggle"
@@ -799,7 +799,7 @@
                         style="font-size: 16px; opacity: 0.8; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
                         Contact our support team for personalized assistance with any questions not covered here.
                     </p>
-                    <a href="#" class="faq-contact-btn"
+                    <a href="javascript:void()" class="faq-contact-btn"
                         style="display: inline-flex; align-items: center; gap: 12px; background: #46DE48; color: white; text-decoration: none; padding: 16px 35px; border-radius: 25px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 20px rgba(70,222,72,0.3); transition: all 0.3s ease;">
                         <i class="bi bi-telephone"></i> Contact Support <i class="bi bi-arrow-right"
                             style="font-size: 20px;"></i>

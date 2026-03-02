@@ -1,16 +1,5 @@
 @extends('layouts.apps')
-@section('content')
-
-<section style="margin: 0; padding: 100px 5% 120px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; position: relative; overflow: hidden; margin-top: 0rem;">
-
-    <!-- Geometric background elements -->
-    <div style="position: absolute; top: 0; left: 0; width: 40%; height: 100%; background-color: #363558; clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); opacity: 0.05;"></div>
-    <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; background-color: #373358; opacity: 0.05;"></div>
-
-    <div style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
-
-<!-- Hero Section -->
-<style>
+@section('content')<style>
 /* ===== HERO SECTION RESPONSIVE STYLES ===== */
 @media (max-width: 1200px) {
     .hero-title {
@@ -151,8 +140,526 @@
 }
 </style>
 
+<style>
+/* ========== SPACING REDUCTIONS FOR RESOURCES & PUBLICATIONS PAGE ========== */
+
+/* Override section padding */
+section[style*="padding: 100px 5% 120px 5%"] {
+    padding: 40px 5% 50px 5% !important;
+}
+
+/* Hero Section */
+.hero-section[style*="text-align: center; margin-bottom: 80px"] {
+    margin-bottom: 30px !important;
+}
+
+.hero-badge[style*="display: inline-block; padding: 10px 30px; margin-bottom: 25px"] {
+    padding: 6px 15px !important;
+    margin-bottom: 10px !important;
+    font-size: 12px !important;
+}
+
+.hero-title[style*="font-size: 70px; margin: 0 0 25px 0"] {
+    font-size: 42px !important;
+    margin-bottom: 8px !important;
+}
+
+.hero-description[style*="font-size: 20px; margin-bottom: 50px"] {
+    font-size: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.hero-button-container[style*="display: flex; gap: 20px"] {
+    gap: 10px !important;
+}
+
+.hero-button[style*="padding: 18px 40px; border-radius: 12px; font-size: 17px"] {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+}
+
+/* Quick Access Section */
+[style*="background: #FFF; border-radius: 25px; padding: 50px; margin-bottom: 80px"] {
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+[style*="text-align: center; margin-bottom: 50px"] {
+    margin-bottom: 20px !important;
+}
+
+h2[style*="font-size: 42px; color: #363558; margin: 0 0 20px 0; font-weight: 800"] {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+}
+
+[style*="font-size: 18px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6"] {
+    font-size: 14px !important;
+}
+
+/* Quick Access Grid */
+[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px"] {
+    gap: 10px !important;
+}
+
+[style*="background: #f8f9fa; border-radius: 20px; padding: 35px 25px"] {
+    padding: 15px !important;
+}
+
+[style*="width: 70px; height: 70px; border-radius: 15px; margin: 0 auto 25px"] {
+    width: 45px !important;
+    height: 45px !important;
+    margin-bottom: 10px !important;
+}
+
+[style*="width: 32px; height: 32px"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+h3[style*="font-size: 20px; color: #363558; margin: 0 0 10px 0; font-weight: 700"] {
+    font-size: 15px !important;
+    margin-bottom: 4px !important;
+}
+
+.quick-access p[style*="color: #5a5a5a; margin: 0; font-size: 14px; line-height: 1.4"] {
+    font-size: 11px !important;
+}
+
+/* Featured Publications Section */
+#publications[style*="margin-bottom: 100px"] {
+    margin-bottom: 30px !important;
+}
+
+[style*="text-align: center; margin-bottom: 60px"]:nth-of-type(1) {
+    margin-bottom: 20px !important;
+}
+
+h2[style*="font-size: 52px; color: #363558; margin: 0 0 20px 0; font-weight: 800"] {
+    font-size: 32px !important;
+    margin-bottom: 8px !important;
+}
+
+[style*="font-size: 19px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6"] {
+    font-size: 14px !important;
+}
+
+/* Publication Cards Grid */
+[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px"] {
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+}
+
+.publication-card[style*="height: 200px"] {
+    height: 140px !important;
+}
+
+[style*="top: 20px; left: 20px; background: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; font-size: 12px"] {
+    padding: 4px 10px !important;
+    font-size: 10px !important;
+    top: 10px !important;
+    left: 10px !important;
+}
+
+[style*="bottom: 20px; left: 20px; right: 20px; color: white"] {
+    bottom: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+}
+
+[style*="font-size: 22px; font-weight: 800; line-height: 1.2"] {
+    font-size: 16px !important;
+}
+
+[style*="padding: 30px"] {
+    padding: 15px !important;
+}
+
+[style*="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px"] {
+    margin-bottom: 8px !important;
+}
+
+[style*="color: #5a5a5a; font-size: 14px; font-weight: 600"] {
+    font-size: 11px !important;
+}
+
+[style*="background: rgba(216,49,55,0.1); padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 700"] {
+    padding: 3px 8px !important;
+    font-size: 9px !important;
+}
+
+.publication-card p[style*="color: #5a5a5a; line-height: 1.6; margin-bottom: 25px"] {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.4 !important;
+}
+
+[style*="display: flex; align-items: center; gap: 10px"] {
+    gap: 4px !important;
+}
+
+[style*="width: 16px; height: 16px"] {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+[style*="color: #363558; font-size: 14px; font-weight: 600"] {
+    font-size: 11px !important;
+}
+
+.publication-card button[style*="padding: 12px 25px; border-radius: 10px; font-size: 14px"] {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+}
+
+/* View All Button */
+[style*="text-align: center; margin-top: 40px"] {
+    margin-top: 20px !important;
+}
+
+[style*="padding: 16px 40px; border-radius: 12px; font-size: 16px"] {
+    padding: 10px 25px !important;
+    font-size: 13px !important;
+}
+
+/* Resource Categories Section */
+#resources[style*="margin-bottom: 100px"] {
+    margin-bottom: 30px !important;
+}
+
+/* Category Headers */
+[style*="display: flex; align-items: center; gap: 20px; margin-bottom: 30px"] {
+    gap: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+[style*="width: 60px; height: 60px; border-radius: 15px"] {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+[style*="width: 32px; height: 32px"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+h3[style*="font-size: 32px; color: #363558; margin: 0; font-weight: 800"] {
+    font-size: 22px !important;
+}
+
+/* Educational Materials Grid */
+[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px"] {
+    gap: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+[style*="background: #FFF; border-radius: 20px; padding: 25px"] {
+    padding: 15px !important;
+}
+
+[style*="display: flex; align-items: center; gap: 15px; margin-bottom: 20px"] {
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+[style*="width: 50px; height: 50px; border-radius: 12px"] {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+[style*="width: 24px; height: 24px"] {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+h4[style*="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700"] {
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+}
+
+[style*="color: #46DE48; font-size: 13px; font-weight: 600"] {
+    font-size: 10px !important;
+}
+
+.educational-card p[style*="color: #5a5a5a; font-size: 14px; line-height: 1.5; margin-bottom: 20px"] {
+    font-size: 11px !important;
+    margin-bottom: 10px !important;
+}
+
+[style*="font-size: 13px"] {
+    font-size: 10px !important;
+}
+
+.educational-card button[style*="padding: 8px 20px; border-radius: 8px; font-size: 13px"] {
+    padding: 4px 10px !important;
+    font-size: 10px !important;
+}
+
+/* Training Videos Grid */
+[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px"] {
+    gap: 10px !important;
+}
+
+.video-card[style*="height: 180px"] {
+    height: 120px !important;
+}
+
+[style*="width: 60px; height: 60px; border-radius: 50%"] {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+[style*="width: 24px; height: 24px"] {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.video-card[style*="padding: 25px"] {
+    padding: 15px !important;
+}
+
+.video-card h4[style*="font-size: 18px; margin: 0 0 10px 0"] {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+}
+
+.video-card p[style*="font-size: 14px; margin-bottom: 20px"] {
+    font-size: 11px !important;
+    margin-bottom: 10px !important;
+}
+
+[style*="color: #363558; font-size: 13px; font-weight: 600"] {
+    font-size: 10px !important;
+}
+
+.video-card button[style*="padding: 8px 20px; border-radius: 8px; font-size: 13px"] {
+    padding: 4px 10px !important;
+    font-size: 10px !important;
+}
+
+/* Toolkits & Guides Section */
+[style*="background: #FFF; border-radius: 25px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.08)"] {
+    padding: 20px !important;
+}
+
+[style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px"] {
+    gap: 15px !important;
+}
+
+.toolkit-item[style*="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px"] {
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.toolkit-item[style*="width: 50px; height: 50px; border-radius: 10px"] {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.toolkit-item h4[style*="font-size: 18px; margin: 0 0 5px 0"] {
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+}
+
+.toolkit-item p[style*="font-size: 14px; line-height: 1.5"] {
+    font-size: 11px !important;
+}
+
+[style*="text-align: center; margin-top: 40px"] {
+    margin-top: 15px !important;
+}
+
+[style*="padding: 14px 35px; border-radius: 10px; font-size: 15px"] {
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+}
+
+/* Newsletter Signup */
+[style*="background: #363558; border-radius: 30px; padding: 70px 60px; margin-bottom: 80px"] {
+    padding: 25px 20px !important;
+    margin-bottom: 30px !important;
+}
+
+[style*="padding: 12px 30px; font-size: 15px; margin-bottom: 25px"] {
+    padding: 5px 15px !important;
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+}
+
+[style*="width: 20px; height: 20px"] {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.newsletter h3[style*="font-size: 42px; margin: 0 0 20px 0"] {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+}
+
+.newsletter p[style*="font-size: 18px; margin: 0 auto 30px auto"] {
+    font-size: 14px !important;
+    margin-bottom: 15px !important;
+}
+
+.newsletter form {
+    gap: 8px !important;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px 15px !important;
+    font-size: 13px !important;
+}
+
+.newsletter button[type="submit"] {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+}
+
+.newsletter p[style*="font-size: 14px; margin-top: 20px"] {
+    font-size: 11px !important;
+    margin-top: 10px !important;
+}
+
+/* Request Resources Section */
+[style*="padding: 50px; background: #FFF; border-radius: 30px"] {
+    padding: 20px !important;
+}
+
+[style*="font-size: 42px; color: #363558; margin: 0 0 20px 0; font-weight: 800"] {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+}
+
+[style*="font-size: 18px; color: #5a5a5a; margin: 0 auto 30px auto"] {
+    font-size: 14px !important;
+    margin-bottom: 15px !important;
+}
+
+.request-buttons[style*="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap"] {
+    gap: 10px !important;
+}
+
+.request-buttons button[style*="padding: 18px 40px; border-radius: 12px; font-size: 17px"] {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+}
+
+/* Reduce floating background elements */
+[style*="width: 300px; height: 300px"] {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+/* Responsive overrides */
+@media (max-width: 992px) {
+    .hero-title[style*="font-size: 42px"] {
+        font-size: 32px !important;
+    }
+    
+    [style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    section[style*="padding: 40px 5% 50px 5%"] {
+        padding: 20px 4% 30px 4% !important;
+    }
+    
+    .hero-title[style*="font-size: 32px"] {
+        font-size: 26px !important;
+    }
+    
+    [style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    [style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .newsletter form {
+        flex-direction: column !important;
+    }
+    
+    .newsletter input[type="email"] {
+        width: 100% !important;
+    }
+    
+    .newsletter button[type="submit"] {
+        width: 100% !important;
+    }
+    
+    .request-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .request-buttons button {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title[style*="font-size: 26px"] {
+        font-size: 22px !important;
+    }
+    
+    h2[style*="font-size: 28px"] {
+        font-size: 24px !important;
+    }
+    
+    h2[style*="font-size: 32px"] {
+        font-size: 26px !important;
+    }
+    
+    h3[style*="font-size: 22px"] {
+        font-size: 18px !important;
+    }
+    
+    [style*="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .publication-card[style*="height: 140px"] {
+        height: 120px !important;
+    }
+    
+    .video-card[style*="height: 120px"] {
+        height: 100px !important;
+    }
+}
+
+/* Disable hover animations on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .quick-access div:hover,
+    .publication-card:hover,
+    .educational-card:hover,
+    .video-card:hover,
+    .toolkit-item:hover {
+        transform: none !important;
+    }
+    
+    button:hover {
+        transform: none !important;
+    }
+}
+</style>
+
+
+<section style="margin: 0; padding: 100px 5% 120px 5%; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #FFF; position: relative; overflow: hidden; margin-top: 0rem;">
+
+    <!-- Geometric background elements -->
+    <div style="position: absolute; top: 0; left: 0; width: 40%; height: 100%; background-color: #363558; clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); opacity: 0.03;"></div>
+    <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; background-color: #363558; opacity: 0.03;"></div>
+
+    <div style="position: relative; z-index: 2; max-width: 1400px; margin: 0 auto;">
+
+<!-- Hero Section -->
+
 <div class="hero-section" style="text-align: center; margin-bottom: 80px;">
-    <div class="hero-badge" style="display: inline-block; padding: 10px 30px; background: #373358; color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(128,143,189,0.3);">
+    <div class="hero-badge" style="display: inline-block; padding: 10px 30px; background: #363558; color: white; border-radius: 30px; font-size: 14px; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(54,53,88,0.3);">
         <svg style="width: 16px; height: 16px; fill: white; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24">
             <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
         </svg>
@@ -160,7 +667,7 @@
     </div>
     
     <h1 class="hero-title" style="font-size: 70px; line-height: 1.05; margin: 0 0 25px 0; color: #363558; font-weight: 800; letter-spacing: -1.5px;">
-        Resources & <span style="color: #DD3134;">Publications</span>
+        Resources & Publications
     </h1>
     
     <p class="hero-description" style="font-size: 20px; line-height: 1.6; color: #5a5a5a; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -169,7 +676,7 @@
     
     <div class="hero-button-container" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
         <a href="#publications" style="text-decoration: none;">
-            <button class="hero-button" style="background: #373358; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
+            <button class="hero-button" style="background: #363558; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 30px rgba(54,53,88,0.25);">
                 <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                     <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                 </svg>
@@ -177,7 +684,7 @@
             </button>
         </a>
         <a href="#resources" style="text-decoration: none;">
-            <button class="hero-button" style="background: white; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+            <button class="hero-button" style="background: #FFF; color: #363558; border: 2px solid #363558; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
                 <svg style="width: 20px; height: 20px; fill: #363558;" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
@@ -188,10 +695,10 @@
 </div>
 
         <!-- Quick Access -->
-        <div style="background: white; border-radius: 25px; padding: 50px; margin-bottom: 80px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+        <div style="background: #FFF; border-radius: 25px; padding: 50px; margin-bottom: 80px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
             <div style="text-align: center; margin-bottom: 50px;">
                 <h2 style="font-size: 42px; color: #363558; margin: 0 0 20px 0; font-weight: 800; letter-spacing: -0.5px;">
-                    Quick <span style="color: #46DE48;">Access</span>
+                    Quick Access
                 </h2>
                 <p style="font-size: 18px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6;">
                     Find what you need quickly with our categorized resources
@@ -215,8 +722,8 @@
 
                 <a href="#research-papers" style="text-decoration: none;">
                     <div style="background: #f8f9fa; border-radius: 20px; padding: 35px 25px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;">
-                        <div style="background: rgba(221,49,52,0.1); color: #DD3134; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                            <svg style="width: 32px; height: 32px; fill: #DD3134;" viewBox="0 0 24 24">
+                        <div style="background: rgba(216,49,55,0.1); color: #D83137; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <svg style="width: 32px; height: 32px; fill: #D83137;" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                             </svg>
                         </div>
@@ -229,8 +736,8 @@
 
                 <a href="#training-videos" style="text-decoration: none;">
                     <div style="background: #f8f9fa; border-radius: 20px; padding: 35px 25px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;">
-                        <div style="background: rgba(145,116,110,0.1); color: #91746E; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                            <svg style="width: 32px; height: 32px; fill: #91746E;" viewBox="0 0 24 24">
+                        <div style="background: rgba(54,53,88,0.1); color: #363558; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <svg style="width: 32px; height: 32px; fill: #363558;" viewBox="0 0 24 24">
                                 <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                             </svg>
                         </div>
@@ -243,8 +750,8 @@
 
                 <a href="#toolkits-guides" style="text-decoration: none;">
                     <div style="background: #f8f9fa; border-radius: 20px; padding: 35px 25px; text-align: center; transition: all 0.3s ease; border: 2px solid transparent; cursor: pointer;">
-                        <div style="background: rgba(128,143,189,0.1); color: #373358; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                            <svg style="width: 32px; height: 32px; fill: #373358;" viewBox="0 0 24 24">
+                        <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 70px; height: 70px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                            <svg style="width: 32px; height: 32px; fill: #46DE48;" viewBox="0 0 24 24">
                                 <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                             </svg>
                         </div>
@@ -261,7 +768,7 @@
         <div id="publications" style="margin-bottom: 100px;">
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2 style="font-size: 52px; color: #363558; margin: 0 0 20px 0; font-weight: 800; letter-spacing: -0.5px;">
-                    Featured <span style="color: #DD3134;">Publications</span>
+                    Featured Publications
                 </h2>
                 <p style="font-size: 19px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6;">
                     Latest research and evidence-based publications from safeMom Navigator
@@ -271,10 +778,10 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
 
                 <!-- Publication 1 -->
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative;">
-                    <div style="height: 200px; background: linear-gradient(135deg, #DD3134, #FF6B6B); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #DD3134; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                            <svg style="width: 14px; height: 14px; fill: #DD3134;" viewBox="0 0 24 24">
+                <div style="background: #FFF; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; position: relative;">
+                    <div style="height: 200px; background: #D83137; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #D83137; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                            <svg style="width: 14px; height: 14px; fill: #D83137;" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                             </svg>
                             RESEARCH PAPER
@@ -287,7 +794,7 @@
                     <div style="padding: 30px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                             <div style="color: #5a5a5a; font-size: 14px; font-weight: 600;">Published: March 2024</div>
-                            <div style="background: rgba(221,49,52,0.1); color: #DD3134; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">PDF • 2.4MB</div>
+                            <div style="background: rgba(216,49,55,0.1); color: #D83137; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">PDF • 2.4MB</div>
                         </div>
                         
                         <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
@@ -301,7 +808,7 @@
                                 </svg>
                                 <span style="color: #363558; font-size: 14px; font-weight: 600;">Peer Reviewed</span>
                             </div>
-                            <button style="background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <button style="background: #D83137; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
                                 <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
                                     <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                                 </svg>
@@ -312,8 +819,8 @@
                 </div>
 
                 <!-- Publication 2 -->
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative;">
-                    <div style="height: 200px; background: linear-gradient(135deg, #46DE48, #80E681); position: relative; overflow: hidden;">
+                <div style="background: #FFF; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; position: relative;">
+                    <div style="height: 200px; background: #46DE48; position: relative; overflow: hidden;">
                         <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #46DE48; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
                             <svg style="width: 14px; height: 14px; fill: #46DE48;" viewBox="0 0 24 24">
                                 <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
@@ -337,24 +844,24 @@
                         
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <div style="display: flex; align-items: center; gap: 10px;">
-                                <svg style="width: 16px; height: 16px; fill: #DD3134;" viewBox="0 0 24 24">
+                                <svg style="width: 16px; height: 16px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                                 </svg>
-                                <svg style="width: 16px; height: 16px; fill: #DD3134;" viewBox="0 0 24 24">
+                                <svg style="width: 16px; height: 16px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                                 </svg>
-                                <svg style="width: 16px; height: 16px; fill: #DD3134;" viewBox="0 0 24 24">
+                                <svg style="width: 16px; height: 16px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                                 </svg>
-                                <svg style="width: 16px; height: 16px; fill: #DD3134;" viewBox="0 0 24 24">
+                                <svg style="width: 16px; height: 16px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                                 </svg>
-                                <svg style="width: 16px; height: 16px; fill: #DD3134;" viewBox="0 0 24 24">
+                                <svg style="width: 16px; height: 16px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                                 </svg>
                                 <span style="color: #363558; font-size: 14px; font-weight: 600;">4.8/5</span>
                             </div>
-                            <button style="background: linear-gradient(90deg, #46DE48, #80E681); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <button style="background: #46DE48; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
                                 <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
                                     <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                                 </svg>
@@ -365,10 +872,10 @@
                 </div>
 
                 <!-- Publication 3 -->
-                <div style="background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); position: relative;">
-                    <div style="height: 200px; background: linear-gradient(135deg, #91746E, #DCCEC1); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #91746E; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                            <svg style="width: 14px; height: 14px; fill: #91746E;" viewBox="0 0 24 24">
+                <div style="background: #FFF; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0; position: relative;">
+                    <div style="height: 200px; background: #363558; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: #363558; padding: 8px 15px; border-radius: 20px; font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                            <svg style="width: 14px; height: 14px; fill: #363558;" viewBox="0 0 24 24">
                                 <path d="M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.1h-15V5h15v14.1zm0-16.1h-15c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
                             </svg>
                             ANNUAL REPORT
@@ -381,7 +888,7 @@
                     <div style="padding: 30px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                             <div style="color: #5a5a5a; font-size: 14px; font-weight: 600;">Published: January 2024</div>
-                            <div style="background: rgba(145,116,110,0.1); color: #91746E; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">PDF • 8.1MB</div>
+                            <div style="background: rgba(54,53,88,0.1); color: #363558; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 700;">PDF • 8.1MB</div>
                         </div>
                         
                         <p style="color: #5a5a5a; line-height: 1.6; margin-bottom: 25px;">
@@ -395,7 +902,7 @@
                                 </svg>
                                 <span style="color: #363558; font-size: 14px; font-weight: 600;">Transparency Award 2023</span>
                             </div>
-                            <button style="background: linear-gradient(90deg, #91746E, #DCCEC1); color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <button style="background: #363558; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px;">
                                 <svg style="width: 16px; height: 16px; fill: white;" viewBox="0 0 24 24">
                                     <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                                 </svg>
@@ -422,7 +929,7 @@
         <div id="resources" style="margin-bottom: 100px;">
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2 style="font-size: 52px; color: #363558; margin: 0 0 20px 0; font-weight: 800; letter-spacing: -0.5px;">
-                    Resource <span style="color: #DD3134;">Categories</span>
+                    Resource Categories
                 </h2>
                 <p style="font-size: 19px; color: #5a5a5a; max-width: 700px; margin: 0 auto; line-height: 1.6;">
                     Organized materials for different audiences and purposes
@@ -441,7 +948,7 @@
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px;">
-                    <div style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="background: #FFF; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
                         <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                             <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                 <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
@@ -464,7 +971,7 @@
                         </div>
                     </div>
 
-                    <div style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="background: #FFF; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
                         <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                             <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                 <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
@@ -487,7 +994,7 @@
                         </div>
                     </div>
 
-                    <div style="background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="background: #FFF; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
                         <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
                             <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                                 <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
@@ -515,8 +1022,8 @@
             <!-- Category 2: Training Videos -->
             <div id="training-videos" style="margin-bottom: 60px;">
                 <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <div style="background: rgba(145,116,110,0.1); color: #91746E; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
-                        <svg style="width: 32px; height: 32px; fill: #91746E;" viewBox="0 0 24 24">
+                    <div style="background: rgba(54,53,88,0.1); color: #363558; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                        <svg style="width: 32px; height: 32px; fill: #363558;" viewBox="0 0 24 24">
                             <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         </svg>
                     </div>
@@ -524,10 +1031,10 @@
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div style="height: 180px; background: linear-gradient(135deg, #91746E, #DCCEC1); position: relative;">
+                    <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                        <div style="height: 180px; background: #363558; position: relative;">
                             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.9); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                <svg style="width: 24px; height: 24px; fill: #91746E;" viewBox="0 0 24 24">
+                                <svg style="width: 24px; height: 24px; fill: #363558;" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
@@ -538,18 +1045,18 @@
                                 Learn to identify critical danger signs during pregnancy and postpartum that require immediate medical attention.
                             </p>
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="color: #91746E; font-size: 13px; font-weight: 600;">Duration: 15:42</span>
-                                <button style="background: transparent; color: #91746E; border: 1px solid #91746E; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+                                <span style="color: #363558; font-size: 13px; font-weight: 600;">Duration: 15:42</span>
+                                <button style="background: transparent; color: #363558; border: 1px solid #363558; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
                                     Watch Now
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div style="height: 180px; background: linear-gradient(135deg, #91746E, #DCCEC1); position: relative;">
+                    <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                        <div style="height: 180px; background: #46DE48; position: relative;">
                             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.9); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                <svg style="width: 24px; height: 24px; fill: #91746E;" viewBox="0 0 24 24">
+                                <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
@@ -560,18 +1067,18 @@
                                 Step-by-step guide to proper breastfeeding techniques, positions, and troubleshooting common issues.
                             </p>
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="color: #91746E; font-size: 13px; font-weight: 600;">Duration: 22:18</span>
-                                <button style="background: transparent; color: #91746E; border: 1px solid #91746E; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+                                <span style="color: #46DE48; font-size: 13px; font-weight: 600;">Duration: 22:18</span>
+                                <button style="background: transparent; color: #46DE48; border: 1px solid #46DE48; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
                                     Watch Now
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div style="height: 180px; background: linear-gradient(135deg, #91746E, #DCCEC1); position: relative;">
+                    <div style="background: #FFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+                        <div style="height: 180px; background: #D83137; position: relative;">
                             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.9); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-                                <svg style="width: 24px; height: 24px; fill: #91746E;" viewBox="0 0 24 24">
+                                <svg style="width: 24px; height: 24px; fill: #D83137;" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
@@ -582,8 +1089,8 @@
                                 Training for navigators on coordinating emergency transport and referral systems for maternal complications.
                             </p>
                             <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span style="color: #91746E; font-size: 13px; font-weight: 600;">Duration: 18:35</span>
-                                <button style="background: transparent; color: #91746E; border: 1px solid #91746E; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+                                <span style="color: #D83137; font-size: 13px; font-weight: 600;">Duration: 18:35</span>
+                                <button style="background: transparent; color: #D83137; border: 1px solid #D83137; padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
                                     Watch Now
                                 </button>
                             </div>
@@ -595,26 +1102,26 @@
             <!-- Category 3: Toolkits & Guides -->
             <div id="toolkits-guides">
                 <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-                    <div style="background: rgba(128,143,189,0.1); color: #373358; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
-                        <svg style="width: 32px; height: 32px; fill: #373358;" viewBox="0 0 24 24">
+                    <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                        <svg style="width: 32px; height: 32px; fill: #46DE48;" viewBox="0 0 24 24">
                             <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                         </svg>
                     </div>
                     <h3 style="font-size: 32px; color: #363558; margin: 0; font-weight: 800;">Toolkits & Guides</h3>
                 </div>
 
-                <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+                <div style="background: #FFF; border-radius: 25px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
+                                <div style="background: rgba(70,222,72,0.1); color: #46DE48; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #46DE48;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Youth Navigator Toolkit</h4>
-                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">Complete Implementation Guide</div>
+                                    <div style="color: #46DE48; font-size: 13px; font-weight: 600;">Complete Implementation Guide</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -624,14 +1131,14 @@
 
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
+                                <div style="background: rgba(54,53,88,0.1); color: #363558; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #363558;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Monitoring & Evaluation Guide</h4>
-                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">For Program Managers</div>
+                                    <div style="color: #363558; font-size: 13px; font-weight: 600;">For Program Managers</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -641,14 +1148,14 @@
 
                         <div>
                             <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-                                <div style="background: rgba(128,143,189,0.1); color: #373358; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 24px; height: 24px; fill: #373358;" viewBox="0 0 24 24">
+                                <div style="background: rgba(216,49,55,0.1); color: #D83137; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <svg style="width: 24px; height: 24px; fill: #D83137;" viewBox="0 0 24 24">
                                         <path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
                                     </svg>
                                 </div>
                                 <div>
                                     <h4 style="font-size: 18px; color: #363558; margin: 0 0 5px 0; font-weight: 700;">Community Engagement Toolkit</h4>
-                                    <div style="color: #373358; font-size: 13px; font-weight: 600;">For Outreach Teams</div>
+                                    <div style="color: #D83137; font-size: 13px; font-weight: 600;">For Outreach Teams</div>
                                 </div>
                             </div>
                             <p style="color: #5a5a5a; font-size: 14px; line-height: 1.5;">
@@ -658,7 +1165,7 @@
                     </div>
 
                     <div style="text-align: center; margin-top: 40px;">
-                        <button style="background: #373358; color: white; border: none; padding: 14px 35px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                        <button style="background: #363558; color: white; border: none; padding: 14px 35px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
                             <svg style="width: 18px; height: 18px; fill: white;" viewBox="0 0 24 24">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                             </svg>
@@ -670,11 +1177,11 @@
         </div>
 
         <!-- Newsletter Signup -->
-        <div style="background: linear-gradient(135deg, #363558, #434961); border-radius: 30px; padding: 70px 60px; margin-bottom: 80px; position: relative; overflow: hidden;">
+        <div style="background: #363558; border-radius: 30px; padding: 70px 60px; margin-bottom: 80px; position: relative; overflow: hidden;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: radial-gradient(circle at 30px 30px, white 2px, transparent 2px); background-size: 60px 60px;"></div>
 
             <div style="position: relative; z-index: 2; text-align: center;">
-                <div style="display: inline-flex; align-items: center; padding: 12px 30px; background: rgba(255,255,255,0.1); color: white; border-radius: 30px; font-size: 15px; font-weight: 700; margin-bottom: 25px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                <div style="display: inline-flex; align-items: center; padding: 12px 30px; background: rgba(255,255,255,0.1); color: white; border-radius: 30px; font-size: 15px; font-weight: 700; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.2);">
                     <svg style="width: 20px; height: 20px; fill: white; margin-right: 10px;" viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
@@ -682,16 +1189,16 @@
                 </div>
 
                 <h3 style="font-size: 42px; color: white; margin: 0 0 20px 0; font-weight: 800; line-height: 1.2;">
-                    Get New Resources <span style="color: #46DE48;">Delivered</span>
+                    Get New Resources Delivered
                 </h3>
 
-                <p style="font-size: 18px; color: #DCCEC1; margin: 0 auto 30px auto; max-width: 700px; line-height: 1.6;">
+                <p style="font-size: 18px; color: #FFF; margin: 0 auto 30px auto; max-width: 700px; line-height: 1.6; opacity: 0.9;">
                     Subscribe to our monthly newsletter to receive new publications, research updates, and resources directly in your inbox.
                 </p>
 
                 <form style="max-width: 600px; margin: 0 auto; display: flex; gap: 15px; flex-wrap: wrap;">
                     <input type="email" style="flex: 1; min-width: 250px; padding: 18px 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: 16px; outline: none;" placeholder="Enter your email address">
-                    <button type="submit" style="background: linear-gradient(90deg, #46DE48, #80E681); color: white; border: none; padding: 18px 35px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+                    <button type="submit" style="background: #46DE48; color: white; border: none; padding: 18px 35px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 10px; white-space: nowrap;">
                         <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                             <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                         </svg>
@@ -699,7 +1206,7 @@
                     </button>
                 </form>
 
-                <p style="color: #DCCEC1; font-size: 14px; margin-top: 20px; opacity: 0.8;">
+                <p style="color: #FFF; font-size: 14px; margin-top: 20px; opacity: 0.8;">
                     <svg style="width: 16px; height: 16px; fill: #46DE48; vertical-align: middle; margin-right: 5px;" viewBox="0 0 24 24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
@@ -709,15 +1216,15 @@
         </div>
 
         <!-- Request Resources -->
-        <div style="text-align: center; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.08);">
+        <div style="text-align: center; padding: 50px; background: #FFF; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
             <h2 style="font-size: 42px; color: #363558; margin: 0 0 20px 0; font-weight: 800; line-height: 1.2;">
-                Can't Find What You're <span style="color: #DD3134;">Looking For</span>?
+                Can't Find What You're Looking For?
             </h2>
             <p style="font-size: 18px; color: #5a5a5a; margin: 0 auto 30px auto; max-width: 700px; line-height: 1.6;">
                 Looking for specific resources or have suggestions for materials we should develop? Let us know!
             </p>
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <button style="background: linear-gradient(90deg, #DD3134, #FF6B6B); color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 12px;">
+                <button style="background: #D83137; color: white; border: none; padding: 18px 40px; border-radius: 12px; font-size: 17px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 12px;">
                     <svg style="width: 20px; height: 20px; fill: white;" viewBox="0 0 24 24">
                         <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>

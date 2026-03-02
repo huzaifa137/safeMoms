@@ -50,7 +50,7 @@
                   <h5 class="mb-0 font-weight-normal">Adminstrator</h5>
                 </div>
               </div>
-              <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <a href="javascript:void()" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
               <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
                 
                 <div class="dropdown-divider"></div>
@@ -149,7 +149,7 @@
    <!-- partial:partials/_footer.html -->
    <footer class="footer">
     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © IshaakCommunityFoundation.org 2022</span>
+      <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © IshaakCommunityFoundation.org 2026</span>
     </div>
   </footer>
   <!-- partial -->
