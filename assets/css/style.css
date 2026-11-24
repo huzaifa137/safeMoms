@@ -356,3 +356,15 @@ nav.main li.has-sub:hover>ul.sub,nav.main li.has-sub:focus-within>ul.sub,nav.mai
 .brief{border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--r);padding:28px 30px;background:#fff}
 .brief h3{margin:6px 0 10px}.brief p{color:var(--text-2);margin-bottom:12px}
 .brief .checks{margin-top:10px;gap:8px}
+
+/* ===== v2 additions ===== */
+.prog.light{background:var(--mist);margin:18px 0 8px}
+.prog.light i{background:var(--green)}
+.subnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.subnav a{padding:9px 16px;border:1px solid rgba(255,255,255,.55);border-radius:99px;color:#fff;font-weight:600;font-size:.92rem}
+.subnav a:hover,.subnav a.on{background:#fff;color:var(--navy-d)}
+.hero .subnav a{backdrop-filter:blur(2px)}
+.region{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:clamp(24px,4vw,44px);background:#fff}
+@media(max-width:760px){.region{grid-template-columns:1fr}}
+@media(max-width:1280px){.hdr-cta .btn-line{display:none}}
+@media(min-width:1061px) and (max-width:1200px){nav.main a{padding:10px 8px;font-size:.92rem}}

@@ -1,28 +1,24 @@
 SAFEMOM UGANDA WEBSITE
 ======================
-Open index.html in a browser to preview. Upload the whole folder to any web host to publish.
+Open index.html in a browser to preview. Upload the whole folder (or git pull) to publish.
 
-PAGES
-index, about, programs, get-help, get-involved, contact, donate, stories, privacy, terms
-RESOURCES (dropdown): resources (overview), gallery, reports (Reports and Briefs), research (Research & Publications),
-news (News and Updates) + one detail page per post: news-northern-uganda, news-sms-languages, news-navigator-spotlight, news-global-health-alliance
-The old Community page was removed.
+NAVIGATION
+Home | About (Who we are, Our approach, Where we work, Team and governance) | Programs (SafePregnancy, SafeDelivery, SafePostpartum)
+Get Help | Resources (Gallery, Reports and Briefs, Research & Publications, News and Updates) | Get Involved (Partner with us, Volunteer, Internships and Careers) | Contact
+Other pages: donate, stories, privacy, terms, and one detail page per news post (news-*.html).
+The nav lives in each page's header. To change it for all pages, edit the generator or search and replace the same block in each .html.
 
 SOCIAL MEDIA LINKS
 Open assets/js/social.js and paste your links between the quotes. They update the header bar, mobile menu, footer and contact page everywhere.
 
-FILES
-assets/css/style.css   all styling. Brand colours are at the top (:root).
-assets/js/main.js      mobile menu, Resources dropdown, counters, gallery filter and lightbox, form handling
-assets/img/            photos and logo files (logo-mark.png is the logo used in the header). Files starting sm- came from the old SafeMoms site.
-
-CONTENT TO VERIFY BEFORE LAUNCH (carried over from the old SafeMoms site)
-- Phone +256 700 123 456 / +256 700 987 654, emails hello@safemomug.org and partners@safemomug.org (search and replace across all .html)
-- Donation page: the 2,500+ / 1,625 sponsored / 65% funded figures, and the bank and mobile money details (placeholders)
-- News posts, annual reports, research papers and downloadable guides: dates, page counts and claims come from the old site. Download links point to the contact page until PDFs exist.
-- Impact numbers: 20+ mothers, 50+ navigators, 1 district (Jinja). Some old pages quoted much larger figures that conflicted with these, so they were left out.
-- Team and board names/roles (about.html). Add photos with consent.
-- Images starting with sm-: replace with your own real photos where possible.
+CONTENT TO VERIFY BEFORE LAUNCH
+- Phone numbers and emails (from the old SafeMoms site): search and replace across all .html.
+- Donation page figures (2,500+ / 1,625 sponsored / 65%) and the bank / mobile money placeholders.
+- News posts, reports, publications and downloadable guides: dates and details come from the old site; download buttons go to Contact until PDFs exist.
+- Impact numbers used: 20+ mothers, 50+ navigators, 1 district (Jinja), goal of 135 districts by 2035.
+- Team and board names and roles. Add photos with consent.
+- Internships and Careers page is new (the old site had none). Check the internship tracks and add real vacancies.
+- Images starting with sm- came from the old site; replace with real, consented photos where possible.
 
 FORMS
-Contact, volunteer and donate forms validate in the browser but do not send data yet. Connect them to a form service or your backend, and a payment provider for donations.
+Forms validate in the browser but do not send data yet. Connect them to a form service or backend, and a payment provider for donations.
